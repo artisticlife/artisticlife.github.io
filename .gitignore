@@ -34,3 +34,6 @@ Temporary Items
 config.codekit
 /min
 
+### Sass ###
+.sass-cache/
+*.css.map
