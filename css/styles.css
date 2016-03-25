@@ -68,19 +68,13 @@ header {
     background-color: #333333;
     width: 100%; }
   header ul {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
     padding: 0;
     margin: 0 0 -1rem -0.465rem;
     width: 100%; }
   header li {
     list-style: none;
-    -webkit-box-flex: 1;
-    -webkit-flex-grow: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
+    flex-grow: 1;
     text-align: center; }
     header li a {
       background-color: #3c3c3c;
@@ -89,7 +83,6 @@ header {
       display: block;
       color: #999;
       text-decoration: none;
-      -webkit-transition: all 0.3s;
       transition: all 0.3s;
       border-left: 0.25px solid #333333;
       border-right: 0.25px solid #333333;
@@ -99,21 +92,27 @@ header {
       color: white;
       box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
       text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
-      -webkit-transition: all 0.3s;
       transition: all 0.3s; }
 
 .donate {
   text-align: center;
   width: 100%;
-  max-width: 39rem; }
+  max-width: 39rem;
+  margin: 0 auto; }
   .donate p {
     text-align: center; }
 
-#tshirt-donate {
+.tshirt-donate {
   text-align: center; }
 
-#adopt-a-pet-banner img {
-  width: 100%; }
+.adopt-a-pet-banner {
+  clear: both; }
+  .adopt-a-pet-banner img {
+    width: 100%;
+    max-width: 468px;
+    float: left;
+    text-align: center;
+    margin-top: 2rem; }
 
 .resp320, .resp568 {
   position: absolute;
