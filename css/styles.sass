@@ -2,6 +2,7 @@ h1
   font-size: 1.7em
 h2
   font-size: 1.45em
+  letter-spacing: -0.03rem
 h3
   font-size: 1.3em
 h4
@@ -59,47 +60,61 @@ header
   nav
     box-shadow: 0 1px 3px black
     position: fixed
-    display: flex
-    flex: 1
     top: 84px
     left: 0
     right: 0
     background-color: rgb(51,51,51)
-  ul
-    list-style: none
-    padding: 0
-    margin: 0
     width: 100%
-    text-align: center
+  ul
+    display: flex
+    padding: 0
+    margin: 0 0 -1rem -0.465rem
+    width: 100%
   li
-    margin-bottom: 0
-    display: inline-block
-    margin: 0 0px
+    list-style: none
+    flex-grow: 1
+    text-align: center
     a
+      background-color: rgb(60,60,60)
+      background-color: rgba(0,200,50,0.05)
       padding: 0.9em 0.57em
       display: block
       color: #999
       text-decoration: none
       transition: all 0.3s
+      border-left: 0.25px solid rgb(51,51,51)
+      border-right: 0.25px solid rgb(51,51,51)
+      border-radius: 5px
     a:hover
-      background-color: rgba(0,200,50,0.5)
+      background-color: rgba(0,200,50,0.3)
       color: white
-      box-shadow: 0px 5px 10px rgba(0,0,0,0.5)
+      box-shadow: 0px 2px 5px rgba(0,0,0,0.5)
       text-shadow: 0px -1px 0px rgba(0,0,0,0.3)
-      transition: all 0.5s
+      transition: all 0.3s
 
 .donate
   text-align: center
+  width: 100%
+  max-width: 39rem
   p
     text-align: center
+
+#tshirt-donate
+  text-align: center
+
+#adopt-a-pet-banner
+  img
+    width: 100%
+
 .resp320, .resp568
   position: absolute
   margin-top: -500px
-#home
-  display: none
-@media screen and (min-width: 374px)
-  #home
-    display: block
+@media screen and (min-width: 360px)
+  // #home
+  //   display: block
+  header
+    ul
+      margin: 0 0 -1rem 0
 @media screen and (min-width: 400px)
   .resp320
     position: inherit
@@ -107,10 +122,12 @@ header
   .resp568
     position: inherit
 @media screen and (min-width: 569px)
-  .resp568
-    position: inherit
   .lead.links
     margin-top: 150px
+  aside.eight.columns
+    margin-left: 0
+    margin-top: -28rem
+    // float: left
 @media screen and (min-width: 640px)
 @media screen and (min-width: 667px)
   .resp320, .resp568

@@ -40,29 +40,30 @@ mixin asideLinks()
     hr
           
 mixin cashDonate
-  aside.donate
+  aside.eight.columns: .donate
     h3 Please Donate!
     p If you would like to donate small amounts each month please select an option below.
-    form(action="https://www.paypal.com/cgi-bin/webscr" method="post")
-      input(style="display: none;" name="cmd" type="hidden" value="_s-xclick")/
-      input(name="hosted_button_id" type="hidden" value="ZMRFEE7564UYY")/
-      input(name="on0" type="hidden" value="")/
-    select(name="os0")
-      option(value="Option 1") Option 1: $1.00 USD - monthly
-      option(value="Option 2") Option 2: $5.00 USD - monthly
-      option(value="Option 3") Option 3: $10.00 USD - monthly
-      option(value="Option 4") Option 4: $20.00 USD - monthly
-    input(name="currency_code" type="hidden" value="USD")/
-    input(alt="PayPal - The safer, easier way to pay online!" name="submit" src="https://www.paypalobjects.com/en_US/i/btn/btn_subscribeCC_LG.gif" type="image")/
-    img(src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" alt="" width="1" height="1" border="0")/
+    div
+      form(action="https://www.paypal.com/cgi-bin/webscr" method="post")
+        input(style="display: none;" name="cmd" type="hidden" value="_s-xclick")/
+        input(name="hosted_button_id" type="hidden" value="ZMRFEE7564UYY")/
+        input(name="on0" type="hidden" value="")/
+      select(name="os0")
+        option(value="Option 1") Option 1: $1.00 USD - monthly
+        option(value="Option 2") Option 2: $5.00 USD - monthly
+        option(value="Option 3") Option 3: $10.00 USD - monthly
+        option(value="Option 4") Option 4: $20.00 USD - monthly
+      input(name="currency_code" type="hidden" value="USD")/
+      input(alt="PayPal - The safer, easier way to pay online!" name="submit" src="https://www.paypalobjects.com/en_US/i/btn/btn_subscribeCC_LG.gif" type="image")/
+      img(src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" alt="" width="1" height="1" border="0")/
   hr  
     
 mixin tshirtDonate()
-  aside
+  aside: #tshirt-donate
     img(title="Thundershirt-Banner" src="./img/thundershirt-banner.gif" alt="Donate a thundershirt!")
   hr  
     
 mixin adoptApetBanner()
-  aside
+  aside: #adopt-a-pet-banner
     a(href="http://www.adoptapet.com/adoption_rescue/84104.html"): img(title="Adopt-A-Pet-Banner" src="./img/sap_468x60_anim.gif" alt="Adoptapet.com")
   hr
