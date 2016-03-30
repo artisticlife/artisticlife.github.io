@@ -1,3 +1,30 @@
+.bg {
+  /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 100%;
+  background-size: cover;
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+  /* Set up positioning */
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: linear-gradient(to right, rgba(251, 234, 215, 0.8), #fbead7), url(/img/skittles320.jpg) no-repeat left 50px fixed;
+  background-attachment: fixed !important;
+  background-size: cover !important; }
+  @media (min-width: 400px) and (orientation: portrait) {
+    .bg {
+      background: url(/img/skittles320.jpg) no-repeat left 0px fixed;
+      background-attachment: fixed;
+      background-size: cover !important;
+      top: 0px; } }
+  @media (min-width: 400px) and (orientation: landscape) {
+    .bg {
+      background: linear-gradient(to right, rgba(251, 234, 215, 0.8), #fbead7), url(/img/skittles.jpg) no-repeat left 0px fixed;
+      background-attachment: inherit;
+      background-size: cover !important; } }
+
 h1 {
   font-size: 1.7em; }
 
@@ -18,7 +45,7 @@ h6 {
   font-size: 0.2em; }
 
 .lead {
-  margin-top: 150px; }
+  margin-top: 130px; }
 
 .lead.links {
   margin-top: 0; }
@@ -30,7 +57,8 @@ p {
   padding: 0 1.5rem; }
 
 .links li {
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  color: #0CB0FF; }
 
 span.linkdescription {
   display: inline-block;
@@ -42,64 +70,58 @@ li {
 main p, section p, aside p {
   margin-bottom: 0.8em; }
 
-header.twelve.columns img {
-  float: left;
-  margin-right: 0.5em;
-  margin-top: 0.3em;
-  height: 80px; }
-header.twelve.columns h1 {
-  margin-bottom: 0;
-  line-height: 0.9em;
-  padding-top: 0.89em; }
-header.twelve.columns h5 {
-  letter-spacing: -0.06rem;
-  line-height: 1.6; }
-
 header {
   position: fixed;
+  top: 0;
+  width: 100%;
   z-index: 150;
-  background: white; }
+  background: #fbead7; }
+  header img {
+    float: left;
+    margin-right: 0.5em;
+    margin-top: 0.3em;
+    height: 80px;
+    border-radius: 50%;
+    background: white; }
+  header h1 {
+    margin-bottom: 0;
+    line-height: 0.9em;
+    padding-top: 0.89em; }
+  header h5 {
+    letter-spacing: -0.06rem;
+    line-height: 1.6; }
   header nav {
     box-shadow: 0 1px 3px black;
     position: fixed;
     top: 84px;
     left: 0;
     right: 0;
-    background-color: #333333;
+    background-color: #A70000;
     width: 100%; }
   header ul {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
     padding: 0;
     margin: 0 0 -1rem -0.465rem;
     width: 100%; }
   header li {
     list-style: none;
-    -webkit-box-flex: 1;
-    -webkit-flex-grow: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
+    flex-grow: 1;
     text-align: center; }
     header li a {
-      background-color: #3c3c3c;
       background-color: rgba(0, 200, 50, 0.05);
       padding: 0.9em 0.57em;
       display: block;
-      color: #999;
+      color: #fbead7;
       text-decoration: none;
-      -webkit-transition: all 0.3s;
       transition: all 0.3s;
-      border-left: 0.25px solid #333333;
-      border-right: 0.25px solid #333333;
+      border-left: 0.25px solid #A70000;
+      border-right: 0.25px solid #A70000;
       border-radius: 5px; }
     header li a:hover {
-      background-color: rgba(0, 200, 50, 0.3);
+      background-color: #008500;
       color: white;
-      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
-      text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
-      -webkit-transition: all 0.3s;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.6);
+      text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.6);
       transition: all 0.3s; }
 
 .donate {
@@ -137,7 +159,7 @@ header {
     position: inherit; } }
 @media screen and (min-width: 569px) {
   .lead.links {
-    margin-top: 150px; }
+    margin-top: 130px; }
 
   aside.eight.columns {
     margin-left: 0;

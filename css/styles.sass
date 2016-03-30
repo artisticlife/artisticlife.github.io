@@ -1,12 +1,43 @@
 @import colors
 
 // - Color variables
-$bgcolor: $color-secondary-1
+$bgcolor: rgb(251, 234, 215)
 $accent-color: $color-secondary-0
 $link-color: $color-tertiary-0
-$hover-color: $color-complement-0
-$header-bgcolor: $color-secondary-2
-$nav-bgcolor: $color-secondary-4
+$hover-color: $color-complement-4
+$header-bgcolor: rgb(251, 234, 215)
+$nav-bgcolor: $color-primary-4
+$nav-btn-color-inactive: $color-complement-4
+$nav-btn-color-active: $color-complement-3
+
+.bg
+  /* Set rules to fill background */
+  min-height: 100%
+  min-width: 100%
+  background-size: cover
+
+  /* Set up proportionate scaling */
+  width: 100%
+  height: auto
+
+  /* Set up positioning */
+  position: fixed
+  left: 0
+  top: 0
+
+  background: linear-gradient(to right, rgba($bgcolor, 0.8), rgba($bgcolor, 1)), url(/img/skittles320.jpg) no-repeat left 50px fixed
+  background-attachment: fixed !important
+  background-size: cover !important
+  @media (min-width: 400px) and (orientation: portrait)
+    background: linear-gradient(to right, rgba($bgcolor, 0.7), rgba($bgcolor, 1)), url(/img/skittles320.jpg) no-repeat left 0px fixed
+    background-attachment: fixed
+    background-size: cover !important
+    top: 0px
+  @media (min-width: 400px) and (orientation: landscape)
+    background: linear-gradient(to right, rgba($bgcolor, 0.8), rgba($bgcolor, 1)), url(/img/skittles.jpg) no-repeat left 0px fixed
+    background-attachment: inherit
+    background-size: cover !important
+
 h1
   font-size: 1.7em
 h2
@@ -20,9 +51,20 @@ h5
   font-size: 0.8em
 h6
   font-size: 0.2em
+// body
+//   background: linear-gradient(rgba($bgcolor, 0.5), rgba($bgcolor, 1)), url(/img/skittles.jpg)
+//   background-position: top right
+//   // background-repeat: no-repeat
+//   background-attachment: fixed
+//
+//   // background:
+//   //   image: url(/img/skittles.jpg) no-repeat center center fixed
+//   //   size: cover
+//     // repeat: no-repeat
+//     // attachment: fixed
 
 .lead
-  margin-top: 150px
+  margin-top: 130px
 
 .lead.links
   margin-top: 0
@@ -36,6 +78,7 @@ p
 .links
   li
     margin-bottom: 0
+    color: $link-color
 
 span.linkdescription
   display: inline-block
@@ -48,12 +91,19 @@ main, section, aside
   p
     margin-bottom: 0.8em
 
-header.twelve.columns
+header
+  position: fixed
+  top: 0
+  width: 100%
+  z-index: 150
+  background: $header-bgcolor
   img
     float: left
     margin-right: 0.5em
     margin-top: 0.3em
     height: 80px
+    border-radius: 50%
+    background: white
   h1
     margin-bottom: 0
     line-height: 0.9em
@@ -61,18 +111,13 @@ header.twelve.columns
   h5
     letter-spacing: -.06rem
     line-height: 1.6
-
-header
-  position: fixed
-  z-index: 150
-  background: white
   nav
     box-shadow: 0 1px 3px black
     position: fixed
     top: 84px
     left: 0
     right: 0
-    background-color: rgb(51,51,51)
+    background-color: $nav-bgcolor
     width: 100%
   ul
     display: flex
@@ -84,21 +129,21 @@ header
     flex-grow: 1
     text-align: center
     a
-      background-color: rgb(60,60,60)
+      // background-color: rgb(60,60,60)
       background-color: rgba(0,200,50,0.05)
       padding: 0.9em 0.57em
       display: block
-      color: #999
+      color: $header-bgcolor
       text-decoration: none
       transition: all 0.3s
-      border-left: 0.25px solid rgb(51,51,51)
-      border-right: 0.25px solid rgb(51,51,51)
+      border-left: 0.25px solid $nav-bgcolor
+      border-right: 0.25px solid $nav-bgcolor
       border-radius: 5px
     a:hover
-      background-color: rgba(0,200,50,0.3)
+      background-color: $hover-color
       color: white
-      box-shadow: 0px 2px 5px rgba(0,0,0,0.5)
-      text-shadow: 0px -1px 0px rgba(0,0,0,0.3)
+      box-shadow: 0px 2px 5px rgba(0,0,0,0.6)
+      text-shadow: 0px -1px 0px rgba(0,0,0,0.6)
       transition: all 0.3s
 
 .donate
@@ -138,7 +183,7 @@ header
     position: inherit
 @media screen and (min-width: 569px)
   .lead.links
-    margin-top: 150px
+    margin-top: 130px
   aside.eight.columns
     margin-left: 0
     margin-top: -28rem

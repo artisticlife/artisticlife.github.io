@@ -1,20 +1,19 @@
 //- Declarations
 mixin headerAndSiteNav()
-  .container 
-    .row
-      header.twelve.columns
-        img(src="/img/annie.png" alt="Annie")
-        h1 Annie's Rescue
-        h5 Helping pets and people is our goal
-    header: nav: .container
-      ul
-        li: a#home(href="#") Home
-        li: a#about(href="#about") About
-          span.resp320  Us
-        li: a#contact(href="#contact") Contact
-        li: a#adopt(href="#adopt") Adopt
-          span.resp568 ion Application
-        li: a#faq(href="#FAQ") FAQ
+  header
+    .container
+      img(src="/img/annie-transp.png" alt="Annie")
+      h1 Annie's Rescue
+      h5 Helping pets and people is our goal
+  header: nav: .container
+    ul
+      li: a#home(href="#") Home
+      li: a#about(href="#about") About
+        span.resp320  Us
+      li: a#contact(href="#contact") Contact
+      li: a#adopt(href="#adopt") Adopt
+        span.resp568 ion Application
+      li: a#faq(href="#FAQ") FAQ
           
           
 mixin asideLinks()
