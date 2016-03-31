@@ -1,5 +1,69 @@
 //- Declarations
-mixin headerAndSiteNav()
+mixin homeHeaderAndSiteNav()
+  header
+    .container
+      img(src="/img/annie-transp.png" alt="Annie")
+      h1 Annie's Rescue
+      h5 Helping pets and people is our goal
+  header: nav: .container
+    ul
+      li: a.focus#home(href="#") Home
+      li: a#about(href="#about") About
+        span.resp320  Us
+      li: a#contact(href="#contact") Contact
+      li: a#adopt(href="#adopt") Adopt
+        span.resp568 ion Application
+      li: a#faq(href="#FAQ") FAQ
+
+mixin aboutHeaderAndSiteNav()
+  header
+    .container
+      img(src="/img/annie-transp.png" alt="Annie")
+      h1 Annie's Rescue
+      h5 Helping pets and people is our goal
+  header: nav: .container
+    ul
+      li: a#home(href="#") Home
+      li: a.focus#about(href="#about") About
+        span.resp320  Us
+      li: a#contact(href="#contact") Contact
+      li: a#adopt(href="#adopt") Adopt
+        span.resp568 ion Application
+      li: a#faq(href="#FAQ") FAQ
+      
+mixin contactHeaderAndSiteNav()
+  header
+    .container
+      img(src="/img/annie-transp.png" alt="Annie")
+      h1 Annie's Rescue
+      h5 Helping pets and people is our goal
+  header: nav: .container
+    ul
+      li: a#home(href="#") Home
+      li: a#about(href="#about") About
+        span.resp320  Us
+      li: a.focus#contact(href="#contact") Contact
+      li: a#adopt(href="#adopt") Adopt
+        span.resp568 ion Application
+      li: a#faq(href="#FAQ") FAQ   
+      
+mixin adoptHeaderAndSiteNav()
+  header
+    .container
+      img(src="/img/annie-transp.png" alt="Annie")
+      h1 Annie's Rescue
+      h5 Helping pets and people is our goal
+  header: nav: .container
+    ul
+      li: a#home(href="#") Home
+      li: a#about(href="#about") About
+        span.resp320  Us
+      li: a#contact(href="#contact") Contact
+      li: a.focus#adopt(href="#adopt") Adopt
+        span.resp568 ion Application
+      li: a#faq(href="#FAQ") FAQ       
+
+mixin faqHeaderAndSiteNav()
   header
     .container
       img(src="/img/annie-transp.png" alt="Annie")
@@ -13,9 +77,9 @@ mixin headerAndSiteNav()
       li: a#contact(href="#contact") Contact
       li: a#adopt(href="#adopt") Adopt
         span.resp568 ion Application
-      li: a#faq(href="#FAQ") FAQ
-          
-          
+      li: a.focus#faq(href="#FAQ") FAQ
+      
+                
 mixin asideLinks()
   aside.four.columns
     h2.lead.links Links
@@ -36,7 +100,7 @@ mixin asideLinks()
       span.linkdescription   - Rally to Rescue facebook page
       li: a(href='#') ProPlan
       span.linkdescription   - ProPlan facebook page
-    hr
+    //- hr
           
 mixin cashDonate
   aside.eight.columns: .donate
@@ -55,14 +119,13 @@ mixin cashDonate
       input(name="currency_code" type="hidden" value="USD")/
       input(alt="PayPal - The safer, easier way to pay online!" name="submit" src="https://www.paypalobjects.com/en_US/i/btn/btn_subscribeCC_LG.gif" type="image")/
       img(src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" alt="" width="1" height="1" border="0")/
-  hr  
+    //- hr
     
 mixin tshirtDonate()
   aside: .tshirt-donate
     img(title="Thundershirt-Banner" src="./img/thundershirt-banner.gif" alt="Donate a thundershirt!")
-  hr  
+    hr  
     
 mixin adoptApetBanner()
   aside.eight.columns: .adopt-a-pet-banner
     a(href="http://www.adoptapet.com/adoption_rescue/84104.html"): img(title="Adopt-A-Pet-Banner" src="./img/sap_468x60_anim.gif" alt="Adoptapet.com")
-  hr

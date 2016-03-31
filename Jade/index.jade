@@ -5,11 +5,13 @@ html
     meta(name="viewport" content="width=device-width, initial scale=1")
     title Annie's Rescue | Helping Pets and People is our Goal
     link(rel="stylesheet" href="./css/normalize.css")
+    link(rel="stylesheet" href="//fonts.googleapis.com/css?family=Raleway:400,300,600" type="text/css")
     link(rel="stylesheet" href="./css/skeleton.css")
     link(rel="stylesheet" href="./css/styles.css")
     include mixins
   body
-    +headerAndSiteNav
+    +homeHeaderAndSiteNav
+    //- .bg-container
     .bg
     .container
       .row
@@ -24,6 +26,7 @@ html
           p Click here to learn about our adoption process.
           hr
         +asideLinks
+      .row
         +cashDonate
         +adoptApetBanner
       

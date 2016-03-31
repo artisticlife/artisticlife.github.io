@@ -1,48 +1,40 @@
 @import colors
 
 // - Color variables
-$bgcolor: rgb(251, 234, 215)
+$bgcolor: #fbead7
 $accent-color: $color-secondary-0
-$link-color: $color-tertiary-0
-$hover-color: $color-complement-4
-$header-bgcolor: rgb(251, 234, 215)
+$link-color: $color-tertiary-3
+$link-hover: $color-tertiary-0
+$hover-color: rgba(0, 133, 0, 0.5)
+$header-bgcolor: #D3BFAD
 $nav-bgcolor: $color-primary-4
 $nav-btn-color-inactive: $color-complement-4
 $nav-btn-color-active: $color-complement-3
 
+// Background div to create full-page fixed background, with gradient overlay since regular background-color doesn't work for this. Photo (background) specific queries to make it look bueno on as many screen sizes and orientations possible without having too many breakpoints.
 .bg
-  /* Set rules to fill background */
+  background: linear-gradient(to right, rgba($bgcolor, 0.7), rgba($bgcolor, 1)), url(/img/skittles320.jpg)
   min-height: 100%
   min-width: 100%
-  background-size: cover
-
-  /* Set up proportionate scaling */
   width: 100%
   height: auto
-
-  /* Set up positioning */
   position: fixed
-  left: 0
-  top: 0
-
-  background: linear-gradient(to right, rgba($bgcolor, 0.8), rgba($bgcolor, 1)), url(/img/skittles320.jpg) no-repeat left 50px fixed
-  background-attachment: fixed !important
-  background-size: cover !important
-  @media (min-width: 400px) and (orientation: portrait)
-    background: linear-gradient(to right, rgba($bgcolor, 0.7), rgba($bgcolor, 1)), url(/img/skittles320.jpg) no-repeat left 0px fixed
-    background-attachment: fixed
-    background-size: cover !important
-    top: 0px
-  @media (min-width: 400px) and (orientation: landscape)
-    background: linear-gradient(to right, rgba($bgcolor, 0.8), rgba($bgcolor, 1)), url(/img/skittles.jpg) no-repeat left 0px fixed
-    background-attachment: inherit
-    background-size: cover !important
+  background-position: center
+  background-repeat: no-repeat
+  background-size: cover
+  z-index: -1
+  @media (min-width: 500px)
+    background: linear-gradient(to right, rgba($bgcolor, 0.75), rgba($bgcolor, 1)), url(/img/skittlescrop.png) center 50px
+    background-size: cover
+  @media (min-width: 500px) and (orientation: portrait)
+    background: linear-gradient(to right, rgba($bgcolor, 0.75), rgba($bgcolor, 1)), url(/img/skittles768.png) -100px 50px
+    background-size: cover
 
 h1
   font-size: 1.7em
 h2
   font-size: 1.45em
-  letter-spacing: -0.03rem
+  font-weight: 500
 h3
   font-size: 1.3em
 h4
@@ -64,7 +56,7 @@ h6
 //     // attachment: fixed
 
 .lead
-  margin-top: 130px
+  margin-top: 160px
 
 .lead.links
   margin-top: 0
@@ -74,11 +66,17 @@ p
 
 .container
   padding: 0 1.5rem
+  @media (min-width: 569px)
+    width: 95%
 
 .links
   li
     margin-bottom: 0
-    color: $link-color
+  a
+    color: #603D22
+    &:hover
+      color: darken($link-hover, 10%)
+
 
 span.linkdescription
   display: inline-block
@@ -86,10 +84,12 @@ span.linkdescription
 
 li
   list-style-type: none
+  color: $nav-btn-color-inactive
 
 main, section, aside
   p
     margin-bottom: 0.8em
+    font-weight: 300
 
 header
   position: fixed
@@ -108,6 +108,7 @@ header
     margin-bottom: 0
     line-height: 0.9em
     padding-top: 0.89em
+    font-weight: 600
   h5
     letter-spacing: -.06rem
     line-height: 1.6
@@ -117,7 +118,7 @@ header
     top: 84px
     left: 0
     right: 0
-    background-color: $nav-bgcolor
+    background-color: desaturate($nav-bgcolor, 40%)
     width: 100%
   ul
     display: flex
@@ -136,15 +137,22 @@ header
       color: $header-bgcolor
       text-decoration: none
       transition: all 0.3s
-      border-left: 0.25px solid $nav-bgcolor
-      border-right: 0.25px solid $nav-bgcolor
+      border-left: 0.25px solid rgba(0,0,0,0.1)
+      border-right: 0.25px solid rgba(0,0,0,0.1)
       border-radius: 5px
+
+
     a:hover
-      background-color: $hover-color
+      background-color: desaturate($nav-bgcolor, 20%)
       color: white
-      box-shadow: 0px 2px 5px rgba(0,0,0,0.6)
-      text-shadow: 0px -1px 0px rgba(0,0,0,0.6)
+      box-shadow: 0px 2px 3px rgba(0,0,0,0.2)
+      // text-shadow: 0px -1px 0px rgba(0,0,0,0.6)
       transition: all 0.3s
+    a:active
+      background-color: desaturate($nav-bgcolor, 20%)
+.focus
+  background-color: desaturate($nav-bgcolor, 20%)
+  color: white
 
 .donate
   text-align: center
@@ -153,19 +161,70 @@ header
   margin: 0 auto
   p
     text-align: center
-
+  @media screen and (min-width: 569px)
+    margin-top: -5rem
+  @media screen and (min-width: 572px)
+    margin-top: -3rem
+  @media screen and (min-width: 576px)
+    margin-top: -7rem
+  @media screen and (min-width: 580px)
+    margin-top: -5rem
+  @media screen and (min-width: 591px)
+    margin-top: -2rem
+  @media screen and (min-width: 593px)
+    margin-top: 0rem
+  @media screen and (min-width: 622px)
+    margin-top: 2rem
+  @media screen and (min-width: 634px)
+    margin-top: 5rem
+  @media screen and (min-width: 659px)
+    margin-top: 3rem
+  @media screen and (min-width: 664px)
+    margin-top: 0rem
+  @media screen and (min-width: 672px)
+    margin-top: 3rem
+  @media screen and (min-width: 677px)
+    margin-top: 5rem
+  @media screen and (min-width: 683px)
+    margin-top: 3rem
+  @media screen and (min-width: 736px)
+    margin-top: 1rem
+  @media screen and (min-width: 773px)
+    margin-top: -1rem
+  @media screen and (min-width: 781px)
+    margin-top: 0rem
+  @media screen and (min-width: 806px)
+    margin-top: 3rem
+  @media screen and (min-width: 831px)
+    margin-top: 0rem
+  @media screen and (min-width: 855px)
+    margin-top: -4rem
+  @media screen and (min-width: 865px)
+    margin-top: -2rem
+  @media screen and (min-width: 872px)
+    margin-top: 0rem
 .tshirt-donate
   text-align: center
 
 .adopt-a-pet-banner
-  clear: both
+  position: relative
+  bottom: 15px
   img
     width: 100%
     max-width: 468px
     float: left
     text-align: center
     margin-top: 2rem
-
+    @media screen and (min-width: 360px)
+      max-width: 100%
+    @media screen and (min-width: 569px)
+      margin-top: 21rem
+    @media screen and (min-width: 591px)
+      margin-top: 24rem
+    @media screen and (min-width: 622px)
+      margin-top: 27rem
+    @media screen and (min-width: 634px)
+      margin-top: 29rem
 .resp320, .resp568
   position: absolute
   margin-top: -500px
@@ -182,12 +241,17 @@ header
   .resp568
     position: inherit
 @media screen and (min-width: 569px)
+  .lead
+    margin-top: 170px
   .lead.links
-    margin-top: 130px
+    margin-top: 170px
   aside.eight.columns
     margin-left: 0
     margin-top: -28rem
-    // float: left
+    @media screen and (min-width: 929px)
+      margin-top: -25rem
+    @media screen and (min-width: 929px)
+      margin-top: -23rem
 @media screen and (min-width: 640px)
 @media screen and (min-width: 667px)
   .resp320, .resp568
