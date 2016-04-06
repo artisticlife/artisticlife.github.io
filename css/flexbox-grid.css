@@ -1,0 +1,109 @@
+.container {
+  width: 980px;
+  margin: 0 auto; }
+
+.row {
+  display: flex;
+  width: 100%; }
+  .row .start {
+    justify-content: flex-start; }
+  .row .end {
+    justify-content: flex-end; }
+  .row .center {
+    justify-content: center; }
+  .row .spaceAround {
+    justify-content: space-around; }
+  .row .spaceBetween {
+    justify-content: space-between; }
+  .row .verticalStart {
+    align-items: flex-start; }
+  .row .verticalCenter {
+    align-items: center; }
+  .row .verticalEnd {
+    align-items: flex-end; }
+  .row .verticalStretch {
+    align-items: stretch; }
+  .row .verticalBaseline {
+    align-items: baseline; }
+  .row .mark {
+    border: 1px dashed #ccc; }
+  .row .mark:hover {
+    border: 1px dashed lightblue;
+    background-color: #eaf5f9; }
+  .row .margin-topBottom {
+    margin-top: 2rem;
+    margin-bottom: 2rem; }
+  .row .margin-leftRight {
+    margin-left: 3rem;
+    margin-right: 3rem;
+    width: calc(100% - 6rem); }
+
+.col {
+  box-sizing: border-box; }
+  .col .paddingTotal {
+    padding: 1rem; }
+  .col .padding-topBottom {
+    padding-top: 1rem;
+    padding-bottom: 1rem; }
+  .col .padding-leftRight {
+    padding-left: 1rem;
+    padding-right: 1rem; }
+
+.col-1-of-4 {
+  width: 25%; }
+
+.col-1-of-3 {
+  width: 33.3333333333%; }
+
+.col-1-of-2, .col-2-of-4 {
+  width: 50%; }
+
+.col-2-of-3 {
+  width: 66.6666666667%; }
+
+.col-3-0f-4 {
+  width: 75%; }
+
+.col-2-of-2, .col-3-of-3, .col-4-of-4 {
+  width: 100%; }
+
+.col.mark {
+  border: 1px dotted red;
+  background-color: #fcdfd4; }
+
+.col.mark:hover {
+  border: 1px dotted lightblue;
+  background-color: #d4eef9; }
+
+.flex-container {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  text-align: center; }
+
+.flex-container > * {
+  padding: 10px;
+  flex: 1 100%; }
+
+.main {
+  text-align: left; }
+
+@media all and (min-width: 600px) {
+  .aside {
+    flex: 1 auto; } }
+@media all and (min-width: 800px) {
+  .main {
+    flex: 3 0px; }
+
+  .aside1 {
+    order: 1; }
+
+  .main {
+    order: 2; }
+
+  .aside2 {
+    order: 3; }
+
+  .footer {
+    order: 4; } }
