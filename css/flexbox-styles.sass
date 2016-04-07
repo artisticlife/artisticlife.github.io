@@ -11,6 +11,8 @@ $nav-bgcolor: $color-primary-4
 $nav-btn-color-inactive: $color-complement-4
 $nav-btn-color-active: $color-complement-3
 
+
+
 // Background div to create full-page fixed background, with gradient overlay since regular background-color doesn't work for this. Photo (background) specific queries to make it look bueno on as many screen sizes and orientations possible without having too many breakpoints.
 .bg
   background: linear-gradient(to right, rgba($bgcolor, 0.7), rgba($bgcolor, 1)), url(/img/skittles320.jpg)
@@ -29,7 +31,10 @@ $nav-btn-color-active: $color-complement-3
   @media (min-width: 500px) and (orientation: portrait)
     background: linear-gradient(to right, rgba($bgcolor, 0.75), rgba($bgcolor, 1)), url(/img/skittles768.png) -100px 50px
     background-size: cover
-
+// Base styles overridden
+body
+  @media (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi)
+    font-weight: 300
 h1
   font-size: 1.7em
 h2
@@ -43,67 +48,25 @@ h5
   font-size: 0.8em
 h6
   font-size: 0.2em
-// body
-//   background: linear-gradient(rgba($bgcolor, 0.5), rgba($bgcolor, 1)), url(/img/skittles.jpg)
-//   background-position: top right
-//   // background-repeat: no-repeat
-//   background-attachment: fixed
-//
-//   // background:
-//   //   image: url(/img/skittles.jpg) no-repeat center center fixed
-//   //   size: cover
-//     // repeat: no-repeat
-//     // attachment: fixed
-
-.lead
-  margin-top: 160px
-
-.lead.links
-  margin-top: 0
-
 p
   text-align: justify
-
-.container
-  padding: 0 1.5rem
-  @media (min-width: 569px)
-    width: 95%
-
-.links
-  li
-    margin-bottom: 0
-  a
-    color: #603D22
-    &:hover
-      color: darken($link-hover, 10%)
-
-
-span.linkdescription
-  display: inline-block
-  margin-bottom: 1.5em
-
-li
-  list-style-type: none
-  color: $nav-btn-color-inactive
-
-main, section, aside
-  p
-    margin-bottom: 0.8em
-    font-weight: 300
-
+  // font-weight: 300
 header
   position: fixed
   top: 0
   width: 100%
   z-index: 150
   background: $header-bgcolor
+  a.header
+    text-decoration: none
+    color: inherit
   img
     float: left
-    margin-right: 0.5em
-    margin-top: 0.3em
-    height: 80px
-    border-radius: 50%
-    background: white
+    // margin-right: 0.5em
+    // margin-top: 0.1em
+    height: 85px
+    // border-radius: 50%
+    background: transparent
   h1
     margin-bottom: 0
     line-height: 0.9em
@@ -141,7 +104,6 @@ header
       border-right: 0.25px solid rgba(0,0,0,0.1)
       border-radius: 5px
 
-
     a:hover
       background-color: desaturate($nav-bgcolor, 20%)
       color: white
@@ -153,6 +115,32 @@ header
 .focus
   background-color: desaturate($nav-bgcolor, 20%)
   color: white
+.main
+  padding-top: 16rem
+  animate: all 0.3s
+.links
+  li
+    margin-bottom: 0
+  a
+    color: #603D22
+    &:hover
+      color: darken($link-hover, 10%)
+
+
+span.linkdescription
+  display: inline-block
+  margin-bottom: 1.5em
+
+li
+  list-style-type: none
+  color: $nav-btn-color-inactive
+
+main, section, aside
+  p
+    margin-bottom: 0.8em
+    font-weight: 300
+
+
 
 .donate
   text-align: center

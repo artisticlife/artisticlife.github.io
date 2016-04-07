@@ -1,7 +1,8 @@
 //- Declarations
+
 mixin homeHeaderAndSiteNav()
-  header
-    .container
+  header: .container
+    a.header(href="#")
       img(src="/img/annie-transp.png" alt="Annie")
       h1 Annie's Rescue
       h5 Helping pets and people is our goal
@@ -16,8 +17,8 @@ mixin homeHeaderAndSiteNav()
       li: a#faq(href="#FAQ") FAQ
 
 mixin aboutHeaderAndSiteNav()
-  header
-    .container
+  header: .container
+    a.header(href="#")
       img(src="/img/annie-transp.png" alt="Annie")
       h1 Annie's Rescue
       h5 Helping pets and people is our goal
@@ -32,8 +33,8 @@ mixin aboutHeaderAndSiteNav()
       li: a#faq(href="#FAQ") FAQ
       
 mixin contactHeaderAndSiteNav()
-  header
-    .container
+  header: .container
+    a.header(href="#")
       img(src="/img/annie-transp.png" alt="Annie")
       h1 Annie's Rescue
       h5 Helping pets and people is our goal
@@ -48,8 +49,8 @@ mixin contactHeaderAndSiteNav()
       li: a#faq(href="#FAQ") FAQ   
       
 mixin adoptHeaderAndSiteNav()
-  header
-    .container
+  header: .container
+    a.header(href="#")
       img(src="/img/annie-transp.png" alt="Annie")
       h1 Annie's Rescue
       h5 Helping pets and people is our goal
@@ -64,8 +65,8 @@ mixin adoptHeaderAndSiteNav()
       li: a#faq(href="#FAQ") FAQ       
 
 mixin faqHeaderAndSiteNav()
-  header
-    .container
+  header: .container
+    a.header(href="#")
       img(src="/img/annie-transp.png" alt="Annie")
       h1 Annie's Rescue
       h5 Helping pets and people is our goal
@@ -81,8 +82,8 @@ mixin faqHeaderAndSiteNav()
       
                 
 mixin asideLinks()
-  aside.four.columns
-    h2.lead.links Links
+  aside
+    h2.links Links
     ul.links
       li: a(href='#') Annie's Rescue, A Dog's Story [Kindle]
       span.linkdescription   - The story about Annie
@@ -103,7 +104,7 @@ mixin asideLinks()
     //- hr
           
 mixin cashDonate
-  aside.eight.columns: .donate
+  aside: .donate
     h3 Please Donate!
     p If you would like to donate small amounts each month please select an option below.
     div
@@ -127,5 +128,5 @@ mixin tshirtDonate()
     hr  
     
 mixin adoptApetBanner()
-  aside.eight.columns: .adopt-a-pet-banner
+  aside: .adopt-a-pet-banner
     a(href="http://www.adoptapet.com/adoption_rescue/84104.html"): img(title="Adopt-A-Pet-Banner" src="./img/sap_468x60_anim.gif" alt="Adoptapet.com")

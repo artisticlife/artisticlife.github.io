@@ -18,6 +18,10 @@
       background: linear-gradient(to right, rgba(251, 234, 215, 0.75), #fbead7), url(/img/skittles768.png) -100px 50px;
       background-size: cover; } }
 
+@media (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+  body {
+    font-weight: 300; } }
+
 h1 {
   font-size: 1.7em; }
 
@@ -37,39 +41,8 @@ h5 {
 h6 {
   font-size: 0.2em; }
 
-.lead {
-  margin-top: 160px; }
-
-.lead.links {
-  margin-top: 0; }
-
 p {
   text-align: justify; }
-
-.container {
-  padding: 0 1.5rem; }
-  @media (min-width: 569px) {
-    .container {
-      width: 95%; } }
-
-.links li {
-  margin-bottom: 0; }
-.links a {
-  color: #603D22; }
-  .links a:hover {
-    color: #0092d8; }
-
-span.linkdescription {
-  display: inline-block;
-  margin-bottom: 1.5em; }
-
-li {
-  list-style-type: none;
-  color: #008500; }
-
-main p, section p, aside p {
-  margin-bottom: 0.8em;
-  font-weight: 300; }
 
 header {
   position: fixed;
@@ -77,13 +50,13 @@ header {
   width: 100%;
   z-index: 150;
   background: #D3BFAD; }
+  header a.header {
+    text-decoration: none;
+    color: inherit; }
   header img {
     float: left;
-    margin-right: 0.5em;
-    margin-top: 0.3em;
-    height: 80px;
-    border-radius: 50%;
-    background: white; }
+    height: 85px;
+    background: transparent; }
   header h1 {
     margin-bottom: 0;
     line-height: 0.9em;
@@ -130,6 +103,29 @@ header {
 .focus {
   background-color: #961111;
   color: white; }
+
+.main {
+  padding-top: 16rem;
+  animate: all 0.3s; }
+
+.links li {
+  margin-bottom: 0; }
+.links a {
+  color: #603D22; }
+  .links a:hover {
+    color: #0092d8; }
+
+span.linkdescription {
+  display: inline-block;
+  margin-bottom: 1.5em; }
+
+li {
+  list-style-type: none;
+  color: #008500; }
+
+main p, section p, aside p {
+  margin-bottom: 0.8em;
+  font-weight: 300; }
 
 .donate {
   text-align: center;
