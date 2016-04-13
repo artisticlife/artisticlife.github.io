@@ -31,47 +31,84 @@ $nav-btn-color-active: $color-complement-3
   @media (min-width: 500px) and (orientation: portrait)
     background: linear-gradient(to right, rgba($bgcolor, 0.75), rgba($bgcolor, 1)), url(/img/skittles768.png) -100px 50px
     background-size: cover
-// Base styles overridden
+
+// Overridden Base Styles
 body
   @media (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi)
     font-weight: 300
+  @media (min-width: 850px)
+    p
+      font-size: 1.6rems
+
 h1
   font-size: 1.7em
+  @media (min-width: 700px)
+    font-size: 3.7rem
+    line-height: 3rem
+    padding-top: 3.5rem
 h2
   font-size: 1.45em
   font-weight: 500
+  @media (min-width: 700px)
+    font-size: 1.8em
+    line-height: normal
+    letter-spacing: -0.5px
 h3
   font-size: 1.3em
 h4
   font-size: 1.1em
 h5
   font-size: 0.8em
+  @media (min-width: 700px)
+    font-size: 1.8rem
+    padding-top: 0.5rem
+    @media (min-width: 850px)
+      font-size: 1.8rem
 h6
   font-size: 0.2em
 p
   text-align: justify
-  // font-weight: 300
+  @media (min-width: 700px)
+    text-align: left
+    font-size: 1.7rem
+    line-height: 1.65
+  @media (min-width: 850px)
+    font-size: 1.8rem
+ul.links
+  font-size: 1.7rem
+// Page sections in the order they appear in the markup.
+
+// Header and Navbar styles.
 header
   position: fixed
   top: 0
   width: 100%
   z-index: 150
   background: $header-bgcolor
+  // .wrapper
+  //   @media (min-width: 400px) and (orientation: portrait)
+  //     justify-content: center
+  //
   a.header
     text-decoration: none
     color: inherit
+    width: 300px
   img
     float: left
-    // margin-right: 0.5em
-    // margin-top: 0.1em
     height: 85px
-    // border-radius: 50%
     background: transparent
+    @media (min-width: 400px)
+      margin-right: 2rem
+    @media (min-width: 700px)
+      height: 110px
   h1
     margin-bottom: 0
     line-height: 0.9em
     padding-top: 0.89em
     font-weight: 600
+    @media (min-width: 700px)
+      line-height: 2rem
+      padding-top: 3.5rem
   h5
     letter-spacing: -.06rem
     line-height: 1.6
@@ -83,11 +120,19 @@ header
     right: 0
     background-color: desaturate($nav-bgcolor, 40%)
     width: 100%
+    @media (min-width: 700px)
+      top: 109px
   ul
     display: flex
+    flex-flow: row nowrap
     padding: 0
     margin: 0 0 -1rem -0.465rem
     width: 100%
+    @media (min-width: 700px)
+      font-weight: 300
+      font-size: 1.75rem
+    @media screen and (min-width: 360px)
+      margin: 0 0 -1rem 0
   li
     list-style: none
     flex-grow: 1
@@ -115,32 +160,23 @@ header
 .focus
   background-color: desaturate($nav-bgcolor, 20%)
   color: white
+
+
+
 .main
   padding-top: 16rem
-  animate: all 0.3s
-.links
-  li
-    margin-bottom: 0
-  a
-    color: #603D22
-    &:hover
-      color: darken($link-hover, 10%)
-
-
-span.linkdescription
-  display: inline-block
-  margin-bottom: 1.5em
-
-li
-  list-style-type: none
-  color: $nav-btn-color-inactive
-
-main, section, aside
-  p
-    margin-bottom: 0.8em
-    font-weight: 300
-
-
+  @media (min-width: 700px)
+    padding-top: 20rem
+  @media (min-width:800px)
+    .col.col-2-of-3
+      flex-shrink: 3
+[class*='col-']
+  hr
+    border-top: 1px solid rgba(96, 61, 34, 0.5)
+    width: 100%
+    margin-right: -0.5%
+    @media (min-width: 700px)
+      margin-right: 0
 
 .donate
   text-align: center
@@ -149,79 +185,53 @@ main, section, aside
   margin: 0 auto
   p
     text-align: center
-  @media screen and (min-width: 569px)
-    margin-top: -5rem
-  @media screen and (min-width: 572px)
-    margin-top: -3rem
-  @media screen and (min-width: 576px)
-    margin-top: -7rem
-  @media screen and (min-width: 580px)
-    margin-top: -5rem
-  @media screen and (min-width: 591px)
-    margin-top: -2rem
-  @media screen and (min-width: 593px)
-    margin-top: 0rem
-  @media screen and (min-width: 622px)
-    margin-top: 2rem
-  @media screen and (min-width: 634px)
-    margin-top: 5rem
-  @media screen and (min-width: 659px)
-    margin-top: 3rem
-  @media screen and (min-width: 664px)
-    margin-top: 0rem
-  @media screen and (min-width: 672px)
-    margin-top: 3rem
-  @media screen and (min-width: 677px)
-    margin-top: 5rem
-  @media screen and (min-width: 683px)
-    margin-top: 3rem
-  @media screen and (min-width: 736px)
-    margin-top: 1rem
-  @media screen and (min-width: 773px)
-    margin-top: -1rem
-  @media screen and (min-width: 781px)
-    margin-top: 0rem
-  @media screen and (min-width: 806px)
-    margin-top: 3rem
-  @media screen and (min-width: 831px)
-    margin-top: 0rem
-  @media screen and (min-width: 855px)
-    margin-top: -4rem
-  @media screen and (min-width: 865px)
-    margin-top: -2rem
-  @media screen and (min-width: 872px)
-    margin-top: 0rem
+
+.links
+  // width: auto
+  // min-width: 250px
+  flex-shrink: 0
+  li
+    margin-bottom: 0
+  a
+    color: #603D22
+    &:hover
+      color: darken($link-hover, 10%)
+  span.linkdescription
+    display: inline-block
+    margin-bottom: 1.5em
+  @media (min-width: 805px)
+    p
+      font-size: 1em
+li
+  list-style-type: none
+  color: $nav-btn-color-inactive
+
+// main, section, aside
+//   p
+//     margin-bottom: 0.8em
+//     font-weight: 300
+
+
+
 .tshirt-donate
   text-align: center
-
+aside.col.col-2-of-3
+  padding-left: 0
 .adopt-a-pet-banner
   position: relative
   bottom: 15px
   img
+    display: block
     width: 100%
-    max-width: 468px
-    float: left
-    text-align: center
-    margin-top: 2rem
+    max-width: 440px
+    margin: 0 auto
     @media screen and (min-width: 360px)
-      max-width: 100%
-    @media screen and (min-width: 569px)
-      margin-top: 21rem
-    @media screen and (min-width: 591px)
-      margin-top: 24rem
-    @media screen and (min-width: 622px)
-      margin-top: 27rem
-    @media screen and (min-width: 634px)
-      margin-top: 29rem
+      width: 100%
 .resp320, .resp568
   position: absolute
   margin-top: -500px
-@media screen and (min-width: 360px)
-  // #home
-  //   display: block
-  header
-    ul
-      margin: 0 0 -1rem 0
+
+
 @media screen and (min-width: 400px)
   .resp320
     position: inherit
@@ -233,13 +243,6 @@ main, section, aside
     margin-top: 170px
   .lead.links
     margin-top: 170px
-  aside.eight.columns
-    margin-left: 0
-    margin-top: -28rem
-    @media screen and (min-width: 929px)
-      margin-top: -25rem
-    @media screen and (min-width: 929px)
-      margin-top: -23rem
 @media screen and (min-width: 640px)
 @media screen and (min-width: 667px)
   .resp320, .resp568

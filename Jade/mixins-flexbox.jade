@@ -6,7 +6,7 @@ mixin homeHeaderAndSiteNav()
       img(src="/img/annie-transp.png" alt="Annie")
       h1 Annie's Rescue
       h5 Helping pets and people is our goal
-  header: nav: .container
+  .row: header: nav: .container
     ul
       li: a.focus#home(href="#") Home
       li: a#about(href="#about") About
@@ -85,8 +85,8 @@ mixin asideLinks()
   aside
     h2.links Links
     ul.links
-      li: a(href='#') Annie's Rescue, A Dog's Story [Kindle]
-      span.linkdescription   - The story about Annie
+      li: a(href='#') Annie's Rescue, A Dog's Story
+      span.linkdescription   - The story about Annie (Kindle version)
       li: a(href='#') Annie's Rescue Wishlist
       span.linkdescription   - Our Amazon.com registry. The same as a wedding or baby shower registry. You place the order and it is shipped straight to us.
       li: a(href='#') Our Facebook page
@@ -101,7 +101,6 @@ mixin asideLinks()
       span.linkdescription   - Rally to Rescue facebook page
       li: a(href='#') ProPlan
       span.linkdescription   - ProPlan facebook page
-    //- hr
           
 mixin cashDonate
   aside: .donate
@@ -120,7 +119,6 @@ mixin cashDonate
       input(name="currency_code" type="hidden" value="USD")/
       input(alt="PayPal - The safer, easier way to pay online!" name="submit" src="https://www.paypalobjects.com/en_US/i/btn/btn_subscribeCC_LG.gif" type="image")/
       img(src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" alt="" width="1" height="1" border="0")/
-    //- hr
     
 mixin tshirtDonate()
   aside: .tshirt-donate
@@ -128,5 +126,5 @@ mixin tshirtDonate()
     hr  
     
 mixin adoptApetBanner()
-  aside: .adopt-a-pet-banner
+  aside.col.col-2-of-3: .adopt-a-pet-banner
     a(href="http://www.adoptapet.com/adoption_rescue/84104.html"): img(title="Adopt-A-Pet-Banner" src="./img/sap_468x60_anim.gif" alt="Adoptapet.com")

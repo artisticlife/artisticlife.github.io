@@ -1,11 +1,4 @@
-// .container
-//   box-sizing: border-box
-//   width: 100%
-//   max-width: 98rem
-//   margin: 0 auto
-//   padding: 0 2rem
 .container
-  // position: relative
   width: 100%
   max-width: 96rem
   margin: 0 auto
@@ -17,8 +10,13 @@
   display: flex
   flex-flow: row wrap
   width: 100%
-  margin: 0
-  padding: 0
+  margin: 0 auto
+  @media (min-width: 700px)
+    width: 98%
+    margin: 0 auto
+    padding: 0
+  @media (min-width: 980px)
+    width: 100%
   .row.start
     justify-content: flex-start
   .row.end
@@ -40,17 +38,12 @@
   .row.verticalBaseline
     align-items: baseline
 
-
-
-
   // Row visual helpers
   .mark
     border: 1px dashed #ccc
   .mark:hover
     border: 1px dashed lightblue
     background-color: #eaf5f9
-
-
 
   // Row margin helpers
   .margin-topBottom
@@ -61,7 +54,21 @@
     margin-right: 3rem
     width: calc(100% - 6rem)
 
-
+// Flex ordering
+.flex
+  display: flex
+  flex-flow: row wrap
+.inline-flex
+  display: inline-flex
+  flex-flow: row nowrap
+.flex1
+  order: 0
+.flex2
+  order: 1
+.flex3
+  order: 2
+.flex4
+  order: 3
 
 // Columns
 .col
@@ -101,6 +108,8 @@
   .col-2-of-2, .col-3-of-3, .col-4-of-4
     width: 100%
 
+
+
 // Column visual helpers
 .col.mark
   border: 1px dotted red
@@ -110,45 +119,10 @@
   background-color: #d4eef9
 
 // Gutters
-
-[class*='col-']
-  padding-right: 1.25%
-  padding-left: 0
-[class*='col-']:last-of-type
-  padding-right: 0
-  padding-left: 2.5%
-
-// .flex-container
-//   display: -webkit-flex
-//   display: flex
-//   -webkit-flex-flow: row wrap
-//   flex-flow: row wrap
-//   text-align: center
-//
-//
-// .flex-container > *
-//   padding: 10px
-//   flex: 1 100%
-//
-//
-// .main
-//   text-align: left
-//
-//
-//
-// @media all and (min-width: 600px)
-//   .aside
-//     flex: 1 auto
-//
-//
-// @media all and (min-width: 800px)
-//   .main
-//     flex: 3 0px
-//   .aside1
-//     order: 1
-//   .main
-//     order: 2
-//   .aside2
-//     order: 3
-//   .footer
-//     order: 4
+@media (min-width: 700px)
+  [class*='col-']
+    padding-right: 1.25%
+    padding-left: 0
+  [class*='col-']:last-of-type
+    padding-right: 0
+    padding-left: 2.5%
