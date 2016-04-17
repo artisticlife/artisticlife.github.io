@@ -1,1 +1,21 @@
-
+doctype
+html
+  include mixins-flexbox
+  +head
+  body
+    +adoptHeaderAndSiteNav
+    .bgAdopt
+    .container.main
+      .row
+        .col.col-2-of-3
+          main
+            h2 Adoption Application
+            
+            //- content
+            
+          hr
+          +cashDonate
+          hr
+        .col.col-1-of-3
+          +asideLinks
+        +adoptApetBanner

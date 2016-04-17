@@ -1,26 +1,22 @@
 doctype
 html
-  head
-    meta(charset="utf-8")
-    meta(name="viewport" content="width=device-width, initial scale=1")
-    title Annie's Rescue | Helping Pets and People is our Goal
-    link(rel="stylesheet" href="./css/normalize.css")
-    link(rel="stylesheet" href="./css/skeleton.css")
-    link(rel="stylesheet" href="./css/styles.css")
-    include mixins
+  include mixins-flexbox
+  +head
   body
     +aboutHeaderAndSiteNav
-    .container
-      .row
-        main.section.eight.columns
-          h2 About Us
-          p Annie started my work with pet rescue by digging INTO my yard one day. It was May of 2010 and I proceded to find out which neighbors house she belonged to. After weeks of her coming back to my yard and breaking in and me taking her back home, Annie’s family told me they hadn’t had her that long and were unable to bond with her and keep her at home. I took Annie in to foster her and found out she had been adopted from Raining Cats N Dogs rescue in Redding. They were happy to take her back into their group and have me foster her.
-
-It was a long road with Annie. We had our work cut out for us dealing with her separation anxiety and Houdini escapes. She was a happy, but shy and easily frightened girl. She loved her crate as her safety zone and learned to give us her absolute trust as we gave her our love and time. She was very smart and willing to please and learned her manners in no time. We fostered Annie for 5 months. We were very attached to Annie, but determined to see her in her own home. We already had 2 large dogs, 6 cats and a parakeet of our own.
-
-I took Annie to an event at Gateway Animal Clinic, the Vet Clinic I used to work for and she was a big hit. She made a big impression on one of the clients there who had lost their cat recently and their dog not long before that. Annie went to visit them at their home and she looked so comfortable and happy, I was happy to leave her in good hands.
-
-After Annie, I was hooked. I fostered 9 more dogs with Raining Cats N Dogs over the next 9 months. Now I can’t see doing anything else. I am starting my own rescue to concentrate on the dogs like Annie, who need more time and work with fear/anxiety issues. I am also a Registered Veterinary Technician and would love to work with dogs with illness or injury issues who need rehabilitation and longer term fostering. These dogs have a hard time making it out of shelters and I want to concentrate on them. I give credit to Annie for inspiring me to go forward with rescue work and for giving me at least as much as I was able to give her.
-          +asideLinks
+    .bgAbout
+    .container.main
+      .row.about-us
+        .col.col-2-of-3
+          main
+            h2 About Us
+            p Annie started my work with pet rescue by digging INTO my yard one day. It was May of 2010 and I proceded to find out which neighbors house she belonged to. After weeks of her coming back to my yard and breaking in and me taking her back home, Annie’s family told me they hadn’t had her that long and were unable to bond with her and keep her at home. I took Annie in to foster her and found out she had been adopted from Raining Cats N Dogs rescue in Redding. They were happy to take her back into their group and have me foster her.
+            p It was a long road with Annie. We had our work cut out for us dealing with her separation anxiety and Houdini escapes. She was a happy, but shy and easily frightened girl. She loved her crate as her safety zone and learned to give us her absolute trust as we gave her our love and time. She was very smart and willing to please and learned her manners in no time. We fostered Annie for 5 months. We were very attached to Annie, but determined to see her in her own home. We already had 2 large dogs, 6 cats and a parakeet of our own.
+            p I took Annie to an event at Gateway Animal Clinic, the Vet Clinic I used to work for and she was a big hit. She made a big impression on one of the clients there who had lost their cat recently and their dog not long before that. Annie went to visit them at their home and she looked so comfortable and happy, I was happy to leave her in good hands.
+            p After Annie, I was hooked. I fostered 9 more dogs with Raining Cats N Dogs over the next 9 months. Now I can’t see doing anything else. I am starting my own rescue to concentrate on the dogs like Annie, who need more time and work with fear/anxiety issues. I am also a Registered Veterinary Technician and would love to work with dogs with illness or injury issues who need rehabilitation and longer term fostering. These dogs have a hard time making it out of shelters and I want to concentrate on them. I give credit to Annie for inspiring me to go forward with rescue work and for giving me at least as much as I was able to give her.
+          hr
           +cashDonate
-          +adoptApetBanner
+          hr
+        .col.col-1-of-3
+          +asideLinks
+        +adoptApetBanner

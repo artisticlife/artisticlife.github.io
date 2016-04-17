@@ -10,11 +10,11 @@ $header-bgcolor: #D3BFAD
 $nav-bgcolor: $color-primary-4
 $nav-btn-color-inactive: $color-complement-4
 $nav-btn-color-active: $color-complement-3
-
-
+$about: #5B3E25
+$about2:#74705E
 
 // Background div to create full-page fixed background, with gradient overlay since regular background-color doesn't work for this. Photo (background) specific queries to make it look bueno on as many screen sizes and orientations possible without having too many breakpoints.
-.bg
+.bgHome
   background: linear-gradient(to right, rgba($bgcolor, 0.7), rgba($bgcolor, 1)), url(/img/skittles320.jpg)
   min-height: 100%
   min-width: 100%
@@ -31,6 +31,20 @@ $nav-btn-color-active: $color-complement-3
   @media (min-width: 500px) and (orientation: portrait)
     background: linear-gradient(to right, rgba($bgcolor, 0.75), rgba($bgcolor, 1)), url(/img/skittles768.png) -100px 50px
     background-size: cover
+
+.bgAbout
+  background: url(/img/bella2x.png)
+  min-height: 100%
+  min-width: 100%
+  width: 100%
+  height: auto
+  position: fixed
+  top: 170px
+  background-position: right
+  background-repeat: no-repeat
+  background-size: cover
+  z-index: -1
+
 
 // Overridden Base Styles
 body
@@ -61,9 +75,10 @@ h5
   font-size: 0.8em
   @media (min-width: 700px)
     font-size: 1.8rem
+    font-weight: 400
     padding-top: 0.5rem
-    @media (min-width: 850px)
-      font-size: 1.8rem
+  @media (min-width: 850px)
+    font-size: 1.8rem
 h6
   font-size: 0.2em
 p
@@ -76,19 +91,22 @@ p
     font-size: 1.8rem
 ul.links
   font-size: 1.7rem
+  line-height: 1.65
+.about-us
+  color: lightgray
 // Page sections in the order they appear in the markup.
 
 // Header and Navbar styles.
+// header.about-us-bg
+//   background: rgba(176, 147, 110, 0.7)
 header
   position: fixed
   top: 0
   width: 100%
   z-index: 150
   background: $header-bgcolor
-  // .wrapper
-  //   @media (min-width: 400px) and (orientation: portrait)
-  //     justify-content: center
-  //
+  // .about-us-bg
+  //   background: #B0936E
   a.header
     text-decoration: none
     color: inherit
@@ -183,6 +201,8 @@ header
   width: 100%
   max-width: 39rem
   margin: 0 auto
+  h3
+    font-weight: 500
   p
     text-align: center
 
@@ -192,10 +212,13 @@ header
   flex-shrink: 0
   li
     margin-bottom: 0
+    font-weight: 500
   a
     color: #603D22
     &:hover
       color: darken($link-hover, 10%)
+    .about-us
+      color: whitesmoke
   span.linkdescription
     display: inline-block
     margin-bottom: 1.5em

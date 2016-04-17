@@ -1,4 +1,4 @@
-.bg {
+.bgHome {
   background: linear-gradient(to right, rgba(251, 234, 215, 0.7), #fbead7), url(/img/skittles320.jpg);
   min-height: 100%;
   min-width: 100%;
@@ -10,13 +10,26 @@
   background-size: cover;
   z-index: -1; }
   @media (min-width: 500px) {
-    .bg {
+    .bgHome {
       background: linear-gradient(to right, rgba(251, 234, 215, 0.75), #fbead7), url(/img/skittlescrop.png) center 50px;
       background-size: cover; } }
   @media (min-width: 500px) and (orientation: portrait) {
-    .bg {
+    .bgHome {
       background: linear-gradient(to right, rgba(251, 234, 215, 0.75), #fbead7), url(/img/skittles768.png) -100px 50px;
       background-size: cover; } }
+
+.bgAbout {
+  background: url(/img/bella2x.png);
+  min-height: 100%;
+  min-width: 100%;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 170px;
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1; }
 
 @media (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
   body {
@@ -53,8 +66,9 @@ h5 {
   @media (min-width: 700px) {
     h5 {
       font-size: 1.8rem;
+      font-weight: 400;
       padding-top: 0.5rem; } }
-  @media (min-width: 700px) and (min-width: 850px) {
+  @media (min-width: 850px) {
     h5 {
       font-size: 1.8rem; } }
 
@@ -73,7 +87,11 @@ p {
       font-size: 1.8rem; } }
 
 ul.links {
-  font-size: 1.7rem; }
+  font-size: 1.7rem;
+  line-height: 1.65; }
+
+.about-us {
+  color: lightgray; }
 
 header {
   position: fixed;
@@ -179,17 +197,22 @@ header {
   width: 100%;
   max-width: 39rem;
   margin: 0 auto; }
+  .donate h3 {
+    font-weight: 500; }
   .donate p {
     text-align: center; }
 
 .links {
   flex-shrink: 0; }
   .links li {
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    font-weight: 500; }
   .links a {
     color: #603D22; }
     .links a:hover {
       color: #0092d8; }
+    .links a .about-us {
+      color: whitesmoke; }
   .links span.linkdescription {
     display: inline-block;
     margin-bottom: 1.5em; }
