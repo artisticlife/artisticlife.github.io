@@ -44,7 +44,12 @@ $about2:#74705E
   background-repeat: no-repeat
   background-size: cover
   z-index: -1
-
+  @media (min-width: 500px)
+    background: linear-gradient(to right, rgba($bgcolor, 0.75), rgba($bgcolor, 1)), url(/img/bella2x.png) center 50px
+    background-size: cover
+  @media (min-width: 500px) and (orientation: portrait)
+    background: linear-gradient(to right, rgba($bgcolor, 0.75), rgba($bgcolor, 1)), url(/img/bella2x.png) -100px 50px
+    background-size: cover
 
 // Overridden Base Styles
 body
