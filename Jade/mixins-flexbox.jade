@@ -1,0 +1,141 @@
+//- Declarations
+
+mixin head()
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    title Annie's Rescue | Helping Pets and People is our Goal
+    link(rel="stylesheet" href="./css/normalize.css")
+    link(rel="stylesheet" href="//fonts.googleapis.com/css?family=Raleway:400,300,500,600" type="text/css")
+    link(rel="stylesheet" href="./css/flexbox-skeleton.css")
+    link(rel="stylesheet" href="./css/flexbox-grid.css")
+    link(rel="stylesheet" href="./css/flexbox-styles.css")
+
+mixin homeHeaderAndSiteNav()
+  header: .container
+    a.header(href="#")
+      img(src="/img/annie-transp.png" alt="Annie")
+      h1 Annie's Rescue
+      h5 Helping pets and people is our goal
+  .row: header: nav: .container
+    ul
+      li: a.focus#home(href="#") Home
+      li: a#about(href="/about-us.html") About
+        span.resp320  Us
+      li: a#contact(href="contact.html") Contact
+      li: a#adopt(href="adopt.html") Adopt
+        span.resp568 ion Application
+      li: a#faq(href="FAQ.html") FAQ
+
+mixin aboutHeaderAndSiteNav()
+  header.about-us-bg: .container
+    a.header(href="/index-flexbox.html")
+      img(src="/img/annie-transp.png" alt="Annie")
+      h1 Annie's Rescue
+      h5 Helping pets and people is our goal
+  header: nav: .container
+    ul
+      li: a#home(href="/index-flexbox.html") Home
+      li: a.focus#about(href="about-us.html") About
+        span.resp320  Us
+      li: a#contact(href="contact.html") Contact
+      li: a#adopt(href="adopt.html") Adopt
+        span.resp568 ion Application
+      li: a#faq(href="FAQ.html") FAQ
+      
+mixin contactHeaderAndSiteNav()
+  header: .container
+    a.header(href="/index-flexbox.html")
+      img(src="/img/annie-transp.png" alt="Annie")
+      h1 Annie's Rescue
+      h5 Helping pets and people is our goal
+  header: nav: .container
+    ul
+      li: a#home(href="/index-flexbox.html") Home
+      li: a#about(href="about-us.html") About
+        span.resp320  Us
+      li: a.focus#contact(href="contact.html") Contact
+      li: a#adopt(href="adopt.html") Adopt
+        span.resp568 ion Application
+      li: a#faq(href="FAQ.html") FAQ   
+      
+mixin adoptHeaderAndSiteNav()
+  header: .container
+    a.header(href="/index-flexbox.html")
+      img(src="/img/annie-transp.png" alt="Annie")
+      h1 Annie's Rescue
+      h5 Helping pets and people is our goal
+  header: nav: .container
+    ul
+      li: a#home(href="/index-flexbox.html") Home
+      li: a#about(href="about-us.html") About
+        span.resp320  Us
+      li: a#contact(href="contact.html") Contact
+      li: a.focus#adopt(href="adopt.html") Adopt
+        span.resp568 ion Application
+      li: a#faq(href="FAQ.html") FAQ       
+
+mixin faqHeaderAndSiteNav()
+  header: .container
+    a.header(href="/index-flexbox.html")
+      img(src="/img/annie-transp.png" alt="Annie")
+      h1 Annie's Rescue
+      h5 Helping pets and people is our goal
+  header: nav: .container
+    ul
+      li: a#home(href="/index-flexbox.html") Home
+      li: a#about(href="about-us.html") About
+        span.resp320  Us
+      li: a#contact(href="contact.html") Contact
+      li: a#adopt(href="adopt.html") Adopt
+        span.resp568 ion Application
+      li: a.focus#faq(href="FAQ.html") FAQ
+      
+                
+mixin asideLinks()
+  aside
+    h2.links Links
+    ul.links
+      li: a(href='#') Annie's Rescue, A Dog's Story
+      span.linkdescription   - The story about Annie (Kindle version)
+      li: a(href='#') Annie's Rescue Wishlist
+      span.linkdescription   - Our Amazon.com registry. The same as a wedding or baby shower registry. You place the order and it is shipped straight to us.
+      li: a(href='#') Our Facebook page
+      span.linkdescription   - Check out our Facebook page for the latest info about our foster pets and our adventures in rescuing.
+      li: a(href='#') Petfinder
+      span.linkdescription   - Visit our Petfinder page to see information about our adoptable pets.
+      li: a(href='#') iGive 
+      span.linkdescription   - Shop through iGive and select Annie’s Pet Rescue as your charity and every time you shop a percentage is donated to help our rescue pets!
+      li: a(href='#') Thundershirts, ho!
+      span.linkdescription   - Thundershirt’s gentle constant pressure, like swaddling an infant, has a dramatic calming effect for most dogs and cats
+      li: a(href='#') Rally to Rescue
+      span.linkdescription   - Rally to Rescue facebook page
+      li: a(href='#') ProPlan
+      span.linkdescription   - ProPlan facebook page
+          
+mixin cashDonate
+  aside: .donate
+    h3 Please Donate!
+    p If you would like to donate small amounts each month please select an option below.
+    div
+      form(action="https://www.paypal.com/cgi-bin/webscr" method="post")
+        input(style="display: none;" name="cmd" type="hidden" value="_s-xclick")/
+        input(name="hosted_button_id" type="hidden" value="ZMRFEE7564UYY")/
+        input(name="on0" type="hidden" value="")/
+      select(name="os0")
+        option(value="Option 1") Option 1: $1.00 USD - monthly
+        option(value="Option 2") Option 2: $5.00 USD - monthly
+        option(value="Option 3") Option 3: $10.00 USD - monthly
+        option(value="Option 4") Option 4: $20.00 USD - monthly
+      input(name="currency_code" type="hidden" value="USD")/
+      input(alt="PayPal - The safer, easier way to pay online!" name="submit" src="https://www.paypalobjects.com/en_US/i/btn/btn_subscribeCC_LG.gif" type="image")/
+      img(src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" alt="" width="1" height="1" border="0")/
+    
+mixin tshirtDonate()
+  aside: .tshirt-donate
+    img(title="Thundershirt-Banner" src="./img/thundershirt-banner.gif" alt="Donate a thundershirt!")
+    hr  
+    
+mixin adoptApetBanner()
+  aside.col.col-2-of-3: .adopt-a-pet-banner
+    a(href="http://www.adoptapet.com/adoption_rescue/84104.html"): img(title="Adopt-A-Pet-Banner" src="./img/sap_468x60_anim.gif" alt="Adoptapet.com")
