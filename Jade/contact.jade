@@ -11,20 +11,20 @@ html
           main
             h2 Contact Us
             .cognito
-              script(src="https://services.cognitoforms.com/s/8S0o48YXv0uy2haTS2rEJg")
-              script. 
-                Cognito.load("forms", { id: "3" })
+              <script src="https://services.cognitoforms.com/s/8S0o48YXv0uy2haTS2rEJg"></script>
+              <script>Cognito.load("forms", { id: "3" });</script>
+
 
             //- content
-            form
-              p Email Address
-              input(type="email" name="email")
-              p First Name
-              input(type="text" name="firstName")
-              p Last Name
-              input(type="text" name="lastName")
-              p What can we do for you?
-              input(type="textfield" name="comment")
+            //- form
+            //-   p Email Address
+            //-   input(type="email" name="email")
+            //-   p First Name
+            //-   input(type="text" name="firstName")
+            //-   p Last Name
+            //-   input(type="text" name="lastName")
+            //-   p What can we do for you?
+            //-   input(type="textfield" name="comment")
 
 
           hr
