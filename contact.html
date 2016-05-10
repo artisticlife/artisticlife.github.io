@@ -35,11 +35,17 @@
         <div class="col col-2-of-3">
           <main>
             <h2>Contact Us</h2>
-            <div class="cognito">
-              <script src="https://services.cognitoforms.com/s/8S0o48YXv0uy2haTS2rEJg"></script>
-              <script>Cognito.load("forms", { id: "3" });</script>
-            </div>
-            
+            <form id="contactus">
+              <label>First Name</label>
+              <input type="text" name="firstName">
+              <label>Last Name</label>
+              <input type="text" name="lastName">
+              <label>Email Address</label>
+              <input type="email" name="email">
+              <label>What can we do for you?</label>
+              <input type="textarea" name="comment">
+              <input type="submit" name="submit" value="Send Email">
+            </form>
           </main>
           <hr>
             <aside>

@@ -12,6 +12,11 @@ $nav-btn-color-inactive: $color-complement-4
 $nav-btn-color-active: $color-complement-3
 $about: #5B3E25
 $about2:#74705E
+$about-header-bgcolor: #BDA586
+$about-header-bgcolor2: #ADA297
+// Header background color
+.about-us-bg
+  background: linear-gradient(to right, rgba($about-header-bgcolor, 1), rgba($about-header-bgcolor2, 1))
 
 // Background div to create full-page fixed background, with gradient overlay since regular background-color doesn't work for this. Photo (background) specific queries to make it look bueno on as many screen sizes and orientations possible without having too many breakpoints.
 .bgHome
@@ -39,17 +44,17 @@ $about2:#74705E
   width: 100%
   height: auto
   position: fixed
-  top: 170px
-  background-position: right
+  top: 120px
+  // background-position: right
   background-repeat: no-repeat
   background-size: cover
   z-index: -1
   @media (min-width: 500px)
-    background: linear-gradient(to right, rgba($bgcolor, 0.75), rgba($bgcolor, 1)), url(/img/bella2x.png) center 50px
+    background: linear-gradient(to left, rgba($bgcolor, 0.6), rgba($bgcolor, 0)), url(/img/bella2x.png)
     background-size: cover
-  @media (min-width: 500px) and (orientation: portrait)
-    background: linear-gradient(to right, rgba($bgcolor, 0.75), rgba($bgcolor, 1)), url(/img/bella2x.png) -100px 50px
-    background-size: cover
+  // @media (min-width: 500px) and (orientation: portrait)
+  //   background: linear-gradient(to right, rgba($bgcolor, 0.75), rgba($bgcolor, 1)), url(/img/bella2x.png) -100px 50px
+  //   background-size: cover
 
 // Overridden Base Styles
 body
@@ -90,15 +95,19 @@ p
   text-align: justify
   @media (min-width: 700px)
     text-align: left
-    font-size: 1.7rem
+    font-size: 1.6rem
     line-height: 1.65
   @media (min-width: 850px)
     font-size: 1.8rem
 ul.links
   font-size: 1.7rem
   line-height: 1.65
-.about-us
-  color: lightgray
+  @media (min-width: 700px)
+    font-size: 1.45rem
+  @media (min-width: 810px)
+    font-size: 1.7rem
+// .about-us
+//   color: lightgray
 // Page sections in the order they appear in the markup.
 
 // Header and Navbar styles.
@@ -233,6 +242,34 @@ header
 li
   list-style-type: none
   color: $nav-btn-color-inactive
+
+label
+  margin-bottom: 0.2rem
+  font-weight: 400
+  font-size: 1.6rem
+  @media (min-width: 700px)
+    font-size: 1.7rem
+  @media (min-width: 850px)
+    font-size: 1.8rem
+input[type="textarea"]
+  min-height: 20rem
+#contactus
+  margin-top: 1.8rem
+  input
+    width: 100%
+  input[type="submit"]
+    width: auto
+    background-color: desaturate($nav-bgcolor, 40%)
+    color: $header-bgcolor
+    font-size: 1.4rem
+    font-weight: 300
+    @media (min-width: 700px)
+      font-size: 1.6rem
+    @media (min-width: 850px)
+      font-size: 1.8rem
+    &:hover
+      color: white
+      background-color: desaturate($nav-bgcolor, 20%)
 
 // main, section, aside
 //   p

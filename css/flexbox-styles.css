@@ -1,3 +1,6 @@
+.about-us-bg {
+  background: linear-gradient(to right, #bda586, #ada297); }
+
 .bgHome {
   background: linear-gradient(to right, rgba(251, 234, 215, 0.7), #fbead7), url(/img/skittles320.jpg);
   min-height: 100%;
@@ -25,11 +28,14 @@
   width: 100%;
   height: auto;
   position: fixed;
-  top: 170px;
-  background-position: right;
+  top: 120px;
   background-repeat: no-repeat;
   background-size: cover;
   z-index: -1; }
+  @media (min-width: 500px) {
+    .bgAbout {
+      background: linear-gradient(to left, rgba(251, 234, 215, 0.6), rgba(251, 234, 215, 0)), url(/img/bella2x.png);
+      background-size: cover; } }
 
 @media (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
   body {
@@ -80,7 +86,7 @@ p {
   @media (min-width: 700px) {
     p {
       text-align: left;
-      font-size: 1.7rem;
+      font-size: 1.6rem;
       line-height: 1.65; } }
   @media (min-width: 850px) {
     p {
@@ -89,9 +95,12 @@ p {
 ul.links {
   font-size: 1.7rem;
   line-height: 1.65; }
-
-.about-us {
-  color: lightgray; }
+  @media (min-width: 700px) {
+    ul.links {
+      font-size: 1.45rem; } }
+  @media (min-width: 810px) {
+    ul.links {
+      font-size: 1.7rem; } }
 
 header {
   position: fixed;
@@ -223,6 +232,40 @@ header {
 li {
   list-style-type: none;
   color: #008500; }
+
+label {
+  margin-bottom: 0.2rem;
+  font-weight: 400;
+  font-size: 1.6rem; }
+  @media (min-width: 700px) {
+    label {
+      font-size: 1.7rem; } }
+  @media (min-width: 850px) {
+    label {
+      font-size: 1.8rem; } }
+
+input[type="textarea"] {
+  min-height: 20rem; }
+
+#contactus {
+  margin-top: 1.8rem; }
+  #contactus input {
+    width: 100%; }
+  #contactus input[type="submit"] {
+    width: auto;
+    background-color: #862121;
+    color: #D3BFAD;
+    font-size: 1.4rem;
+    font-weight: 300; }
+    @media (min-width: 700px) {
+      #contactus input[type="submit"] {
+        font-size: 1.6rem; } }
+    @media (min-width: 850px) {
+      #contactus input[type="submit"] {
+        font-size: 1.8rem; } }
+    #contactus input[type="submit"]:hover {
+      color: white;
+      background-color: #961111; }
 
 .tshirt-donate {
   text-align: center; }

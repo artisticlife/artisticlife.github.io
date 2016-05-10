@@ -10,21 +10,19 @@ html
         .col.col-2-of-3
           main
             h2 Contact Us
-            .cognito
-              <script src="https://services.cognitoforms.com/s/8S0o48YXv0uy2haTS2rEJg"></script>
-              <script>Cognito.load("forms", { id: "3" });</script>
-
-
-            //- content
-            form
-              p Email Address
-              input(type="email" name="email")
-              p First Name
+            form#contactus
+              
+              label First Name
               input(type="text" name="firstName")
-              p Last Name
+              label Last Name
               input(type="text" name="lastName")
-              p What can we do for you?
-              input(type="textfield" name="comment")
+              label Email Address
+              input(type="email" name="email")
+              label What can we do for you?
+              input(type="textarea" name="comment")
+              input(type="submit" name="submit" value="Send Email")
+              
+              
 
 
           hr
