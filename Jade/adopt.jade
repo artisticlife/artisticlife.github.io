@@ -8,11 +8,194 @@ html
     .container.main
       .row
         .col.col-2-of-3
-          main
-            h2 Adoption Application
-            
-            p poop
-            
+          h2 Adoption Application
+          p Annie’s Pet Rescue is dedicated to finding the right fit for each pet in our rescue. We want the adoptive family to have a wonderful relationship for the lifetime of the pet. Completing this application does not guarantee this pet will be placed in your home.
+          p Your information will be kept private.
+          p Please fill out the form COMPLETELY. When you have completed both this and the Release form, you should receive a response. If you do not receive a response in a reasonable amount of time, please call or email to let us know. Thanks for your cooperation.
+          form#adoptionApplication
+            label Name of Pet you are applying for:
+            input(type="text" name="petName")
+            label Your First Name:
+            input(type="text" name="clientFirstName")
+            label Your Last Name:
+            input(type="text" name="clientLastName")
+            label Home Phone:
+            input(type="tel" name="homePhone")
+            label Cell Phone:
+            input(type="tel" name="cellPhone")
+            label Street Address:
+            input(type="text" name="streetAddress")
+            label City:
+            input(type="text" name="city")
+            input(type="hidden" value="dropdown")
+            label Select a State
+            select(name="stateDropdown")
+              option(value="AL") Alabama
+              option(value="AK") Alaska
+              option(value="AZ") Arizona
+              option(value="AR") Arkansas
+              option(value="CA" selected) California
+              option(value="CO") Colorado
+              option(value="CT") Connecticut
+              option(value="DE") Delaware
+              option(value="DC") District of Columbia
+              option(value="FL") Florida
+              option(value="GA") Georgia
+              option(value="HI") Hawaii
+              option(value="ID") Idaho
+              option(value="IL") Illinois
+              option(value="IN") Indiana
+              option(value="IA") Iowa
+              option(value="KS") Kansas
+              option(value="KY") Kentucky
+              option(value="LA") Louisiana
+              option(value="ME") Maine
+              option(value="MD") Maryland
+              option(value="MA") Massachusetts
+              option(value="MI") Michigan
+              option(value="MN") Minnesota
+              option(value="MS") Mississippi
+              option(value="MO") Missouri
+              option(value="MT") Montana
+              option(value="NE") Nebraska
+              option(value="NV") Nevada
+              option(value="NH") New Hampsire
+              option(value="NJ") New Jersey
+              option(value="NM") New Mexico
+              option(value="NY") New York
+              option(value="NC") North Carolina
+              option(value="ND") North Dakota
+              option(value="OH") Ohio
+              option(value="OK") Oklahoma
+              option(value="OR") Oregon
+              option(value="PA") Pennsylvania
+              option(value="RI") Rhode Island
+              option(value="SC") South Carolina
+              option(value="SD") South Dakota
+              option(value="TN") Tennessee
+              option(value="TX") Texas
+              option(value="UT") Utah
+              option(value="VT") Vermont
+              option(value="VA") Virginia
+              option(value="WA") Washington
+              option(value="WV") West Virginia
+              option(value="WI") Wisconsin
+              option(value="WY") Wyoming
+            label Zip Code:
+            input(type="number" min="1" max="5" name="zipCode")
+            label Email Address:
+            input(type="email" name="email")
+            label Employer:
+            input(type="text" name="employer")
+            label Work Phone:
+            input(type="tel" name="workPhone")
+            label Why are you interested in adopting this pet?
+            textarea(cols="10" rows="40" wrap="hard" name="whyInterested")
+            label Do you
+            input(type="radio" name="ownRent" value="Own") 
+            |  Own &nbsp&nbsp <strong>or</strong> &nbsp&nbsp
+            input(type="radio" name="ownRent" value="Rent") 
+            |  Rent
+            label Name of Landlord:
+            input(type="text" name="landlordName")
+            label Landlord Phone:
+            input(type="number" name="landlordPhone")
+            label We require a home check before adoption. Is this acceptable to you?
+            input(type="radio" name="homeCheckOK" value="Yes")
+            |  Yes &nbsp&nbsp <strong>or</strong> &nbsp&nbsp
+            input(type="radio" name="homeCheckOK" value="No")
+            |  No
+            label How many people live in your home? 
+            label Number of Adults:
+            input(type="number" name="howManyAdults")
+            label Number of Children:
+            input(type="number" name="howManyChildren")
+            label What are the ages of any children in your home?
+            input(type="number" name="childrenAges")
+            label Are any family members allergic to any animals?
+            input(type="radio" name="allergicYesNo" value="Yes")
+            |  Yes &nbsp&nbsp <strong>or</strong> &nbsp&nbsp
+            input(type="radio" name="allergicYesNo" value="No")
+            |  No
+            label What animals are they allergic to?
+            input(type="text" name="animalAllergies")
+            label Who will care for this pet?
+            input(type="text" name="caretaker")
+            label Are you able and willing to provide medical care if this pet becomes sick or injured?
+            input(type="radio" name="medicalCareYesNo" value="Yes")
+            |  Yes &nbsp&nbsp <strong>or</strong> &nbsp&nbsp
+            input(type="radio" name="medicalCareYesNo" value="No")
+            |  No
+            label How many hours per day will this pet be without human companionship?
+            input(type="number" name="hoursWithoutCompanion")
+            label How many days per week?
+            input(type="number" name="daysPerWeek")
+            label Where would this pet stay when no one is home?
+            input(type="text" name="whereStayWhenNotHome")
+            label Which of these best describes your home?
+            input(type="radio" name="homeDescription" value="veryActive")
+            |  Lots of things going on
+            .br
+            input(type="radio" name="homeDescription" value="moderatelyActive")
+            |  Moderately Active
+            .br
+            input(type="radio" name="homeDescription" value="quiet")
+            |  Quiet
+            br
+            label This pet will be:
+            input(type="radio" name="insideOutside" value="inside")
+            |  Inside
+            .br
+            input(type="radio" name="insideOutside" value="outside")
+            |  Outside
+            .br
+            input(type="radio" name="insideOutside" value="both")
+            |  Inside and Outside
+            label Is your yard fenced?
+            input(type="radio" name="fenceYesNo" value="Yes")
+            |  Yes &nbsp&nbsp <strong>or</strong> &nbsp&nbsp
+            input(type="radio" name="fenceYesNo" value="No")
+            |  No
+            label Height of fence in feet:
+            input(type="number" name="fenceHeight")
+            label What behaviors would not be acceptable in your home?
+            textarea(cols="10" rows="40" wrap="hard" name="unacceptableBehaviors")
+            label Under what circumstances would you not keep this pet?
+            textarea(cols="10" rows="40" wrap="hard" name="noKeepCircumstances")
+            label What would happen to this pet if you had to move?
+            textarea(cols="10" rows="40" wrap="hard" name="ifMove")
+            label Do you understand that a dog may live 15 years or longer? And a cat may live 20 years?
+            input(type="radio" name="averageLifespan" value="Yes")
+            |  Yes &nbsp&nbsp <strong>or</strong> &nbsp&nbsp
+            input(type="radio" name="averageLifespan" value="No")
+            |  No
+            label What would happen to this pet if you were no longer able to keep it or if it were to outlive you?
+            textarea(cols="10" rows="40" wrap="hard" name="unableToKeep")
+            label Please list your current pets:
+            input(type="text" name="petList")
+            label Please list any pets that have passed away in the past 5 years and what happened to them:
+            textarea(cols="10" rows="40" wrap="hard" name="petDeathHistory")
+            label Have you ever had to give a pet away?
+            input(type="radio" name="giveAwayYesNo" value="Yes")
+            |  Yes &nbsp&nbsp <strong>or</strong> &nbsp&nbsp
+            input(type="radio" name="giveAwayYesNo" value="No")
+            |  No
+            label If so, when and why?
+            textarea(cols="10" rows="40" wrap="hard" name="giveAwayWhy")
+            label Are you prepared to allow two weeks or more for your pet to adjust to its new home?
+            input(type="radio" name="twoWeekAdjustment" value="yes")
+            |  Yes &nbsp&nbsp <strong>or</strong> &nbsp&nbsp
+            input(type="radio" name="twoWeekAdjustment" value="no")
+            |  No
+            label If you have any comments please leave them below.
+            textarea(cols="10" rows="40" wrap="hard" name="comments")
+            label I agree that all the information I have provided is true and that I am at least 18 years old:
+            input(type="radio" name="agreeAndEighteen" value="yes")
+            |  Yes &nbsp&nbsp <strong>or</strong> &nbsp&nbsp
+            input(type="radio" name="agreeAndEighteen" value="no")
+            |  No
+            p Next you will be taken to a Release form that is also a required document for adoption.  Again, submitting your application does not guarantee a pet will be placed in your home.  If you have further questions about our adoption process, please click on the link above for a full explanation of our procedures for selecting the perfect home for our fosters.  Thank you for your patience and understanding.
+            input(type="submit" name="submitApplication" value="Submit Application")
           hr
           +cashDonate
           hr

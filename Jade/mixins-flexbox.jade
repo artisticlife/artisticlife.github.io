@@ -12,7 +12,7 @@ mixin head()
     link(rel="stylesheet" href="./css/flexbox-styles.css")
 
 mixin homeHeaderAndSiteNav()
-  header: .container
+  header.home-bg: .container
     a.header(href="#")
       img(src="/img/annie-transp.png" alt="Annie")
       h1 Annie's Rescue
@@ -44,7 +44,7 @@ mixin aboutHeaderAndSiteNav()
       li: a#faq(href="FAQ.html") FAQ
       
 mixin contactHeaderAndSiteNav()
-  header: .container
+  header.contact-us-bg: .container
     a.header(href="/index-flexbox.html")
       img(src="/img/annie-transp.png" alt="Annie")
       h1 Annie's Rescue
@@ -60,7 +60,7 @@ mixin contactHeaderAndSiteNav()
       li: a#faq(href="FAQ.html") FAQ   
       
 mixin adoptHeaderAndSiteNav()
-  header: .container
+  header.adopt-bg: .container
     a.header(href="/index-flexbox.html")
       img(src="/img/annie-transp.png" alt="Annie")
       h1 Annie's Rescue

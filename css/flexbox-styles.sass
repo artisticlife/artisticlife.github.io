@@ -12,15 +12,32 @@ $nav-btn-color-inactive: $color-complement-4
 $nav-btn-color-active: $color-complement-3
 $about: #5B3E25
 $about2:#74705E
+$home-header-bgcolor: #C9B7A4
+$home-header-bgcolor2: #FBEAD8
 $about-header-bgcolor: #BDA586
 $about-header-bgcolor2: #ADA297
+$contact-us-header-bgcolor: #CABEB1
+$contact-us-header-bgcolor2: #EEDFCE
+$adopt-header-bgcolor: #CCBBAB
+$adopt-header-bgcolor2: #E9D9C8
 // Header background color
 .about-us-bg
   background: linear-gradient(to right, rgba($about-header-bgcolor, 1), rgba($about-header-bgcolor2, 1))
+.home-bg
+  background: linear-gradient(to right, rgba($home-header-bgcolor, 1), rgba($home-header-bgcolor2, 1))
+.contact-us-bg
+  background: linear-gradient(to right, rgba($contact-us-header-bgcolor, 1), rgba($contact-us-header-bgcolor2, 1))
+.adopt-bg
+  background: linear-gradient(to right, rgba($adopt-header-bgcolor, 1), rgba($adopt-header-bgcolor2, 1))
 
 // Background div to create full-page fixed background, with gradient overlay since regular background-color doesn't work for this. Photo (background) specific queries to make it look bueno on as many screen sizes and orientations possible without having too many breakpoints.
 .bgHome
   background: linear-gradient(to right, rgba($bgcolor, 0.7), rgba($bgcolor, 1)), url(/img/skittles320.jpg)
+  -webkit-filter: blur(2px)
+  -moz-filter: blur(2px)
+  -o-filter: blur(2px)
+  -ms-filter: blur(2px)
+  filter: blur(2px)
   min-height: 100%
   min-width: 100%
   width: 100%
@@ -39,22 +56,62 @@ $about-header-bgcolor2: #ADA297
 
 .bgAbout
   background: url(/img/bella2x.png)
+  background: linear-gradient(to left, rgba($bgcolor, 0.6), rgba($bgcolor, 0)), url(/img/bella2x.png)
+  -webkit-filter: blur(2px)
+  -moz-filter: blur(2px)
+  -o-filter: blur(2px)
+  -ms-filter: blur(2px)
+  filter: blur(2px)
   min-height: 100%
   min-width: 100%
   width: 100%
   height: auto
   position: fixed
   top: 120px
-  // background-position: right
   background-repeat: no-repeat
   background-size: cover
   z-index: -1
   @media (min-width: 500px)
-    background: linear-gradient(to left, rgba($bgcolor, 0.6), rgba($bgcolor, 0)), url(/img/bella2x.png)
+
     background-size: cover
-  // @media (min-width: 500px) and (orientation: portrait)
-  //   background: linear-gradient(to right, rgba($bgcolor, 0.75), rgba($bgcolor, 1)), url(/img/bella2x.png) -100px 50px
-  //   background-size: cover
+.bgContact
+  background: linear-gradient(to bottom left, rgba($bgcolor, 0.9), rgba($bgcolor, 0.5)), url(/img/blanca.jpg) no-repeat center
+  min-height: 100%
+  min-width: 100%
+  width: 100%
+  height: auto
+  position: fixed
+  top: 120px
+  background-repeat: no-repeat
+  background-size: cover
+  -webkit-filter: blur(2px)
+  -moz-filter: blur(2px)
+  -o-filter: blur(2px)
+  -ms-filter: blur(2px)
+  filter: blur(2px)
+  z-index: -1
+  @media (min-width: 500px)
+    background: linear-gradient(to bottom left, rgba($bgcolor, 0.9), rgba($bgcolor, 0.5)), url(/img/blanca.jpg) no-repeat center
+    background-size: cover
+.bgAdopt
+  background: linear-gradient(to bottom left, rgba($bgcolor, 0.9), rgba($bgcolor, 0.5)), url(/img/cici.jpg) no-repeat center
+  min-height: 100%
+  min-width: 100%
+  width: 100%
+  height: auto
+  position: fixed
+  top: 120px
+  background-repeat: no-repeat
+  background-size: cover
+  -webkit-filter: blur(2px)
+  -moz-filter: blur(2px)
+  -o-filter: blur(2px)
+  -ms-filter: blur(2px)
+  filter: blur(2px)
+  z-index: -1
+  @media (min-width: 500px)
+    background: linear-gradient(to bottom left, rgba($bgcolor, 0.9), rgba($bgcolor, 0.5)), url(/img/cici.jpg) no-repeat center
+    background-size: cover
 
 // Overridden Base Styles
 body
@@ -106,13 +163,10 @@ ul.links
     font-size: 1.45rem
   @media (min-width: 810px)
     font-size: 1.7rem
-// .about-us
-//   color: lightgray
+
 // Page sections in the order they appear in the markup.
 
 // Header and Navbar styles.
-// header.about-us-bg
-//   background: rgba(176, 147, 110, 0.7)
 header
   position: fixed
   top: 0
@@ -221,8 +275,6 @@ header
     text-align: center
 
 .links
-  // width: auto
-  // min-width: 250px
   flex-shrink: 0
   li
     margin-bottom: 0
@@ -245,14 +297,12 @@ li
 
 label
   margin-bottom: 0.2rem
-  font-weight: 400
+  font-weight: 600
   font-size: 1.6rem
   @media (min-width: 700px)
     font-size: 1.7rem
   @media (min-width: 850px)
     font-size: 1.8rem
-input[type="textarea"]
-  min-height: 20rem
 #contactus
   margin-top: 1.8rem
   input
@@ -270,11 +320,36 @@ input[type="textarea"]
     &:hover
       color: white
       background-color: desaturate($nav-bgcolor, 20%)
-
-// main, section, aside
-//   p
-//     margin-bottom: 0.8em
-//     font-weight: 300
+#adoptionApplication
+  input
+    width: 100%
+  input[type="submit"]
+    width: auto
+    background-color: desaturate($nav-bgcolor, 40%)
+    color: $header-bgcolor
+    font-size: 1.4rem
+    font-weight: 300
+    @media (min-width: 700px)
+      font-size: 1.6rem
+    @media (min-width: 850px)
+      font-size: 1.8rem
+    &:hover
+      color: white
+      background-color: desaturate($nav-bgcolor, 20%)
+  input[type="radio"]
+    width: auto
+  input, textarea, select, fieldset
+    margin-bottom: 2.3rem
+  textarea
+    min-height: 65px
+    max-height: 300px
+    padding-top: 6px
+    padding-bottom: 6px
+    min-width: 100%
+    max-width: 100%
+  .br
+    display: block
+    margin-bottom: -1.3rem
 
 
 

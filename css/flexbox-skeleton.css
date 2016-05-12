@@ -250,10 +250,12 @@ input[type="text"],
 input[type="tel"],
 input[type="url"],
 input[type="password"],
+input[type="textarea"],
 textarea {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none; }
+input[type="textarea"],
 textarea {
   min-height: 65px;
   padding-top: 6px;
@@ -265,6 +267,7 @@ input[type="text"]:focus,
 input[type="tel"]:focus,
 input[type="url"]:focus,
 input[type="password"]:focus,
+input[type="textarea"]:focus,
 textarea:focus,
 select:focus {
   border: 1px solid #33C3F0;

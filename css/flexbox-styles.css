@@ -1,8 +1,22 @@
 .about-us-bg {
   background: linear-gradient(to right, #bda586, #ada297); }
 
+.home-bg {
+  background: linear-gradient(to right, #c9b7a4, #fbead8); }
+
+.contact-us-bg {
+  background: linear-gradient(to right, #cabeb1, #eedfce); }
+
+.adopt-bg {
+  background: linear-gradient(to right, #ccbbab, #e9d9c8); }
+
 .bgHome {
   background: linear-gradient(to right, rgba(251, 234, 215, 0.7), #fbead7), url(/img/skittles320.jpg);
+  -webkit-filter: blur(2px);
+  -moz-filter: blur(2px);
+  -o-filter: blur(2px);
+  -ms-filter: blur(2px);
+  filter: blur(2px);
   min-height: 100%;
   min-width: 100%;
   width: 100%;
@@ -23,6 +37,12 @@
 
 .bgAbout {
   background: url(/img/bella2x.png);
+  background: linear-gradient(to left, rgba(251, 234, 215, 0.6), rgba(251, 234, 215, 0)), url(/img/bella2x.png);
+  -webkit-filter: blur(2px);
+  -moz-filter: blur(2px);
+  -o-filter: blur(2px);
+  -ms-filter: blur(2px);
+  filter: blur(2px);
   min-height: 100%;
   min-width: 100%;
   width: 100%;
@@ -34,7 +54,48 @@
   z-index: -1; }
   @media (min-width: 500px) {
     .bgAbout {
-      background: linear-gradient(to left, rgba(251, 234, 215, 0.6), rgba(251, 234, 215, 0)), url(/img/bella2x.png);
+      background-size: cover; } }
+
+.bgContact {
+  background: linear-gradient(to bottom left, rgba(251, 234, 215, 0.9), rgba(251, 234, 215, 0.5)), url(/img/blanca.jpg) no-repeat center;
+  min-height: 100%;
+  min-width: 100%;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 120px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-filter: blur(2px);
+  -moz-filter: blur(2px);
+  -o-filter: blur(2px);
+  -ms-filter: blur(2px);
+  filter: blur(2px);
+  z-index: -1; }
+  @media (min-width: 500px) {
+    .bgContact {
+      background: linear-gradient(to bottom left, rgba(251, 234, 215, 0.9), rgba(251, 234, 215, 0.5)), url(/img/blanca.jpg) no-repeat center;
+      background-size: cover; } }
+
+.bgAdopt {
+  background: linear-gradient(to bottom left, rgba(251, 234, 215, 0.9), rgba(251, 234, 215, 0.5)), url(/img/cici.jpg) no-repeat center;
+  min-height: 100%;
+  min-width: 100%;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 120px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-filter: blur(2px);
+  -moz-filter: blur(2px);
+  -o-filter: blur(2px);
+  -ms-filter: blur(2px);
+  filter: blur(2px);
+  z-index: -1; }
+  @media (min-width: 500px) {
+    .bgAdopt {
+      background: linear-gradient(to bottom left, rgba(251, 234, 215, 0.9), rgba(251, 234, 215, 0.5)), url(/img/cici.jpg) no-repeat center;
       background-size: cover; } }
 
 @media (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
@@ -235,7 +296,7 @@ li {
 
 label {
   margin-bottom: 0.2rem;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 1.6rem; }
   @media (min-width: 700px) {
     label {
@@ -243,9 +304,6 @@ label {
   @media (min-width: 850px) {
     label {
       font-size: 1.8rem; } }
-
-input[type="textarea"] {
-  min-height: 20rem; }
 
 #contactus {
   margin-top: 1.8rem; }
@@ -266,6 +324,38 @@ input[type="textarea"] {
     #contactus input[type="submit"]:hover {
       color: white;
       background-color: #961111; }
+
+#adoptionApplication input {
+  width: 100%; }
+#adoptionApplication input[type="submit"] {
+  width: auto;
+  background-color: #862121;
+  color: #D3BFAD;
+  font-size: 1.4rem;
+  font-weight: 300; }
+  @media (min-width: 700px) {
+    #adoptionApplication input[type="submit"] {
+      font-size: 1.6rem; } }
+  @media (min-width: 850px) {
+    #adoptionApplication input[type="submit"] {
+      font-size: 1.8rem; } }
+  #adoptionApplication input[type="submit"]:hover {
+    color: white;
+    background-color: #961111; }
+#adoptionApplication input[type="radio"] {
+  width: auto; }
+#adoptionApplication input, #adoptionApplication textarea, #adoptionApplication select, #adoptionApplication fieldset {
+  margin-bottom: 2.3rem; }
+#adoptionApplication textarea {
+  min-height: 65px;
+  max-height: 300px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  min-width: 100%;
+  max-width: 100%; }
+#adoptionApplication .br {
+  display: block;
+  margin-bottom: -1.3rem; }
 
 .tshirt-donate {
   text-align: center; }
