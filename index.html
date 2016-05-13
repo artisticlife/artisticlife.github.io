@@ -5,31 +5,31 @@
     <meta name="viewport" content="width=device-width, initial scale=1">
     <title>Annie's Rescue | Helping Pets and People is our Goal</title>
     <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Raleway:400,300,600" type="text/css">
     <link rel="stylesheet" href="./css/skeleton.css">
     <link rel="stylesheet" href="./css/styles.css">
   </head>
   <body>
-        <div class="container"> 
-          <div class="row">
-            <header class="twelve columns"><img src="/img/annie.png" alt="Annie">
-              <h1>Annie's Rescue</h1>
-              <h5>Helping pets and people is our goal</h5>
-            </header>
+        <header>
+          <div class="container"><img src="/img/annie-transp.png" alt="Annie">
+            <h1>Annie's Rescue</h1>
+            <h5>Helping pets and people is our goal</h5>
           </div>
-          <header>
-            <nav>
-              <div class="container">
-                <ul>
-                  <li><a id="home" href="#">Home</a></li>
-                  <li><a id="about" href="#about">About<span class="resp320"> Us</span></a></li>
-                  <li><a id="contact" href="#contact">Contact</a></li>
-                  <li><a id="adopt" href="#adopt">Adopt<span class="resp568">ion Application</span></a></li>
-                  <li><a id="faq" href="#FAQ">FAQ</a></li>
-                </ul>
-              </div>
-            </nav>
-          </header>
-        </div>
+        </header>
+        <header>
+          <nav>
+            <div class="container">
+              <ul>
+                <li><a id="home" href="#" class="focus">Home</a></li>
+                <li><a id="about" href="#about">About<span class="resp320"> Us</span></a></li>
+                <li><a id="contact" href="#contact">Contact</a></li>
+                <li><a id="adopt" href="#adopt">Adopt<span class="resp568">ion Application</span></a></li>
+                <li><a id="faq" href="#FAQ">FAQ</a></li>
+              </ul>
+            </div>
+          </nav>
+        </header>
+    <div class="bg"></div>
     <div class="container">
       <div class="row">
         <main class="section eight columns">
@@ -55,30 +55,33 @@
                 <li><a href="#">Rally to Rescue</a></li><span class="linkdescription">  - Rally to Rescue facebook page</span>
                 <li><a href="#">ProPlan</a></li><span class="linkdescription">  - ProPlan facebook page</span>
               </ul>
-              <hr>
             </aside>
-            <aside class="donate">
-              <h3>Please Donate!</h3>
-              <p>If you would like to donate small amounts each month please select an option below.</p>
-              <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-                <input style="display: none;" name="cmd" type="hidden" value="_s-xclick">
-                <input name="hosted_button_id" type="hidden" value="ZMRFEE7564UYY">
-                <input name="on0" type="hidden" value="">
-              </form>
-              <select name="os0">
-                <option value="Option 1">Option 1: $1.00 USD - monthly</option>
-                <option value="Option 2">Option 2: $5.00 USD - monthly</option>
-                <option value="Option 3">Option 3: $10.00 USD - monthly</option>
-                <option value="Option 4">Option 4: $20.00 USD - monthly</option>
-              </select>
-              <input name="currency_code" type="hidden" value="USD">
-              <input alt="PayPal - The safer, easier way to pay online!" name="submit" src="https://www.paypalobjects.com/en_US/i/btn/btn_subscribeCC_LG.gif" type="image"><img src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" alt="" width="1" height="1" border="0">
+      </div>
+      <div class="row">
+            <aside class="eight columns">
+              <div class="donate">
+                <h3>Please Donate!</h3>
+                <p>If you would like to donate small amounts each month please select an option below.</p>
+                <div>
+                  <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                    <input style="display: none;" name="cmd" type="hidden" value="_s-xclick">
+                    <input name="hosted_button_id" type="hidden" value="ZMRFEE7564UYY">
+                    <input name="on0" type="hidden" value="">
+                  </form>
+                  <select name="os0">
+                    <option value="Option 1">Option 1: $1.00 USD - monthly</option>
+                    <option value="Option 2">Option 2: $5.00 USD - monthly</option>
+                    <option value="Option 3">Option 3: $10.00 USD - monthly</option>
+                    <option value="Option 4">Option 4: $20.00 USD - monthly</option>
+                  </select>
+                  <input name="currency_code" type="hidden" value="USD">
+                  <input alt="PayPal - The safer, easier way to pay online!" name="submit" src="https://www.paypalobjects.com/en_US/i/btn/btn_subscribeCC_LG.gif" type="image"><img src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" alt="" width="1" height="1" border="0">
+                </div>
+              </div>
             </aside>
-            <hr>
-            <aside><img title="Thundershirt-Banner" src="./img/thundershirt-banner.gif" alt="Donate a thundershirt!"></aside>
-            <hr>
-            <aside><a href="http://www.adoptapet.com/adoption_rescue/84104.html"><img title="Adopt-A-Pet-Banner" src="./img/sap_468x60_anim.gif" alt="Adoptapet.com"></a></aside>
-            <hr>
+            <aside class="eight columns">
+              <div class="adopt-a-pet-banner"><a href="http://www.adoptapet.com/adoption_rescue/84104.html"><img title="Adopt-A-Pet-Banner" src="./img/sap_468x60_anim.gif" alt="Adoptapet.com"></a></div>
+            </aside>
       </div>
     </div>
   </body>
