@@ -9,6 +9,10 @@
 
 .adopt-bg {
   background: linear-gradient(to right, #ccbbab, #e9d9c8); }
+  
+.faq-bg {
+  background: linear-gradient(to right, #ccbbab, #e9d9c8);
+}
 
 .bgHome {
   background: linear-gradient(to right, rgba(251, 234, 215, 0.7), #fbead7), url(/img/skittles320.jpg);
