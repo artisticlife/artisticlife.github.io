@@ -97,7 +97,7 @@
     .bgAdopt {
       background: linear-gradient(to bottom left, rgba(251, 234, 215, 0.9), rgba(251, 234, 215, 0.5)), url(/img/cici.jpg) no-repeat center;
       background-size: cover; } }
-.bgFAQ
+.bgFAQ {
   background: linear-gradient(to bottom left, rgba(251, 234, 215, 0.9), rgba(251, 234, 215, 0.5)), url(/img/nash.jpg) no-repeat center;
   min-height: 100%;
   min-width: 100%;
