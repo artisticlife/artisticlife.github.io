@@ -1,4 +1,4 @@
-// /**
+// /*
  * Check a href for an anchor. If exists, and in document, scroll to it.
  * If href argument ommited, assumes context (this) is HTML Element,
  * which will be the case when invoked by jQuery after an event
