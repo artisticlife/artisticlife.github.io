@@ -510,10 +510,10 @@ $CSVLINE = "\n"; /* line termination for CSV files.  The default is a single lin
 	                    this value, you *must* set $CSVOPEN = "b". */
 
 /* Help: http://www.tectite.com/fmdoc/templatedir.php */
-$TEMPLATEDIR = "/fmtemplates"; /* directory for template files; empty string if you don't have any templates */
+$TEMPLATEDIR = ""; /* directory for template files; empty string if you don't have any templates */
 
 /* Help: http://www.tectite.com/fmdoc/templateurl.php */
-$TEMPLATEURL = ""; /* default; no template URL */
+$TEMPLATEURL = "http://artisticlifephoto.com/fmtemplates"; /* default; no template URL */
 
 /* Help: http://www.tectite.com/fmdoc/multiformdir.php */
 $MULTIFORMDIR = ""; /* directory for multi-form template files; empty string if you're not using multi-forms */
