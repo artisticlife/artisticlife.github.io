@@ -9,7 +9,7 @@
 
 .adopt-bg {
   background: linear-gradient(to right, #ccbbab, #e9d9c8); }
-  
+
 .faq-bg {
   background: linear-gradient(to right, #ccbbab, #e9d9c8);
 }
@@ -379,6 +379,24 @@ label {
 #adoptionApplication .br {
   display: block;
   margin-bottom: -1.3rem; }
+
+#VetAuth input {
+  width: 100%; }
+#VetAuth input[type="submit"] {
+  width: auto;
+  background-color: #862121;
+  color: #D3BFAD;
+  font-size: 1.4rem;
+  font-weight: 300; }
+  @media (min-width: 700px) {
+    #VetAuth input[type="submit"] {
+      font-size: 1.6rem; } }
+  @media (min-width: 850px) {
+    #VetAuth input[type="submit"] {
+      font-size: 1.8rem; } }
+  #VetAuth input[type="submit"]:hover {
+    color: white;
+    background-color: #961111; }
 
 .tshirt-donate {
   text-align: center; }
