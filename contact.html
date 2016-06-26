@@ -34,13 +34,14 @@
       <div class="row">
         <div class="col col-2-of-3">
           <h2>Contact Us</h2>
-          <form id="contactus">
-            <label>First Name</label>
-            <input type="text" name="firstName">
-            <label>Last Name</label>
-            <input type="text" name="lastName">
+          <form method="post" id="contactus" action="http://artisticlifephoto.com/formmail.php>
+            <input type="hidden" name="recipients" value="jeremy_atTheDomain_artisticlifephoto.com" />
+            <input type="hidden" name="subject" value="Annie's Rescue Contact Form Submission" />
+            <input type="hidden" name="mail_options" value="HTMLTemplate=contactTemplate.html" />
+            <label>First and Last Name</label>
+            <input type="text" name="clientName">
             <label>Email Address</label>
-            <input type="email" name="email">
+            <input type="email" name="clientEmail">
             <label>What can we do for you?</label>
             <input type="textarea" name="comment">
             <input type="submit" name="submit" value="Send Email">
